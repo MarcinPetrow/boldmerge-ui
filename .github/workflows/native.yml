@@ -18,6 +18,9 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-24.04
+    env:
+      GSK_RENDERER: cairo
+      LIBGL_ALWAYS_SOFTWARE: '1'
     steps:
       - uses: actions/checkout@v4
       - name: Install GTK toolchain

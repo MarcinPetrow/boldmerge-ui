@@ -26,8 +26,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: web/package-lock.json
+          cache-dependency-path: |
+            web/package-lock.json
+            examples/web/package-lock.json
       - run: npm ci
+      - run: npm ci
+        working-directory: examples/web
       - run: npx playwright install --with-deps chromium firefox webkit
       - run: npm run check
       - run: npm run test:browser-matrix
