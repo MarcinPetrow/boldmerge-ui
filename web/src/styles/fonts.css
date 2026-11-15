@@ -1,0 +1,7 @@
+@import '@fontsource-variable/inter/wght.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+
+:root {
+  --bm-font-family-ui: 'Inter Variable', Inter, system-ui, sans-serif;
+  --bm-font-family-data: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+}

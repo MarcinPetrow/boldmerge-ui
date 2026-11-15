@@ -1,0 +1,3 @@
+option('introspection', type: 'feature', value: 'auto', description: 'Build GObject Introspection data')
+option('demo', type: 'boolean', value: true, description: 'Build the BoldMerge Native foundation demo')
+option('tests', type: 'boolean', value: true, description: 'Build BoldMerge Native tests')

@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px; color: var(--bm-color-text-primary); background: var(--bm-color-background); font-family: var(--bm-typography-family-ui); }
+main { inline-size: 440px; }
+form { display: grid; gap: var(--bm-layout-gap); }
+button { justify-self: start; }

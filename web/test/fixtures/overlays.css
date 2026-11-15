@@ -1,0 +1,13 @@
+:root { color: var(--bm-color-text-primary); background: var(--bm-color-canvas); font-family: var(--bm-typography-family-ui); }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); min-block-size: 100vh; }
+.fixture { position: relative; min-block-size: 560px; padding: var(--bm-size-32); color: var(--bm-color-text-primary); background: var(--bm-color-canvas); }
+.fixture + .fixture { border-inline-start: var(--bm-size-1) solid var(--bm-color-border); }
+h1, h2, p { margin: 0; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--bm-size-16); margin-block-start: var(--bm-size-48); }
+.top-row { margin-block-start: var(--bm-size-64); }
+.menu-row { margin-block-start: var(--bm-size-64); }
+button { min-block-size: var(--bm-button-height); padding-inline: var(--bm-button-padding-inline); color: var(--bm-color-text-primary); background: var(--bm-color-surface); border: var(--bm-size-1) solid var(--bm-color-border-strong); border-radius: var(--bm-button-radius); font: inherit; }
+#selection { margin-block-start: var(--bm-size-48); color: var(--bm-color-text-secondary); }
+@media (max-width: 720px) { main { grid-template-columns: 1fr; } .fixture + .fixture { border-inline-start: 0; border-block-start: var(--bm-size-1) solid var(--bm-color-border); } }

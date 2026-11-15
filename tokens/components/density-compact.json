@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "component",
+  "context": { "density": "compact" },
+  "tokens": {
+    "button.height": { "type": "dimension", "value": "32px", "description": "Compact button height; preserve a 44px target in touch contexts.", "status": "approved" },
+    "button.padding.inline": { "type": "dimension", "value": "12px", "description": "Compact button horizontal padding.", "status": "proposal" },
+    "table.row.height": { "type": "dimension", "value": "36px", "description": "Compact table row height.", "status": "approved" },
+    "card.padding": { "type": "dimension", "value": "12px", "description": "Compact card padding.", "status": "approved" },
+    "card.section.gap": { "type": "dimension", "value": "12px", "description": "Compact gap between populated card regions.", "status": "proposal" },
+    "section.gap": { "type": "dimension", "value": "24px", "description": "Compact section gap.", "status": "approved" },
+    "layout.gap": { "type": "dimension", "value": "16px", "description": "Compact general layout gap.", "status": "approved" },
+    "sidebar.item.height": { "type": "dimension", "value": "32px", "description": "Compact sidebar item height; preserve a 44px target in touch contexts.", "status": "approved" },
+    "input.floating.height": { "type": "dimension", "value": "40px", "description": "Compact floating-label input height; preserve a 44px target in touch contexts.", "status": "approved" },
+    "input.padding.inline": { "type": "dimension", "value": "8px", "description": "Compact floating-label input horizontal padding.", "status": "proposal" },
+    "input.error.padding.block": { "type": "dimension", "value": "8px", "description": "Compact integrated error vertical padding.", "status": "proposal" },
+    "tab.height": { "type": "dimension", "value": "36px", "description": "Compact tab height; preserve a 44px target in touch contexts.", "status": "approved" },
+    "menu.item.height": { "type": "dimension", "value": "32px", "description": "Compact menu item height; preserve a 44px target in touch contexts.", "status": "approved" },
+    "dialog.padding": { "type": "dimension", "value": "16px", "description": "Provisional Compact dialog padding.", "status": "proposal" },
+    "drawer.padding": { "type": "dimension", "value": "16px", "description": "Provisional Compact drawer padding.", "status": "proposal" },
+    "toast.padding": { "type": "dimension", "value": "12px", "description": "Provisional Compact toast padding.", "status": "proposal" },
+    "validation-summary.padding": { "type": "dimension", "value": "12px", "description": "Provisional Compact validation summary padding.", "status": "proposal" }
+  }
+}

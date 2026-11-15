@@ -1,0 +1,3 @@
+import '../../src/styles/tokens.css'; import '../../src/styles/foundations.css'; import '../../src/command-palette.js'; import './command-palette.css';
+import type { BoldMergeCommandPalette } from '../../src/components/command-palette.js';
+const palette = document.querySelector<BoldMergeCommandPalette>('#palette'); const trigger = document.querySelector<HTMLElement>('#trigger'); trigger?.addEventListener('click', (event) => palette?.show({ trigger, originalEvent: event })); palette?.addEventListener('bm-command-palette-select', (event) => { const result = document.querySelector('#result'); if (result) result.textContent = (event as CustomEvent<{ value: string }>).detail.value; });

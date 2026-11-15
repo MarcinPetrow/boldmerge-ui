@@ -1,0 +1,2 @@
+import '../src/styles/tokens.css'; import '../src/styles/foundations.css'; import '../src/theme.js'; import '../src/kpi.js'; import './component-demo.css'; import './kpi.css';
+const set = (id: string, values: number[]) => { const element = document.querySelector(id) as HTMLElement & { sparkline: number[] }; if (element) element.sparkline = values; }; set('#revenue', [72, 74, 73, 79, 82, 86, 91]); set('#errors', [26, 23, 25, 19, 18, 15, 12]); set('#latency', [210, 218, 214, 228, 231, 242, 248]);

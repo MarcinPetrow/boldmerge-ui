@@ -1,0 +1,20 @@
+{
+  "name": "@boldmerge/design-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Canonical build-time design tokens for BoldMerge Adaptive",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs",
+    "tokens:build": "node scripts/build-tokens.mjs",
+    "tokens:validate": "node scripts/build-tokens.mjs --validate-only",
+    "tokens:check-generated": "node scripts/check-generated.mjs",
+    "tokens:custom": "node scripts/generate-custom-accent.mjs",
+    "lint": "node --check scripts/build-tokens.mjs && node --check scripts/check-generated.mjs && node --check scripts/generate-custom-accent.mjs && node --check scripts/lib/colors.mjs && node --check scripts/lib/token-system.mjs",
+    "test": "node test/token-system.test.mjs",
+    "check": "npm run lint && npm run tokens:validate && npm run tokens:check-generated && npm test"
+  }
+}

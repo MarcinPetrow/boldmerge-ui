@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "package": "@boldmerge/web",
+  "version": "0.0.0",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "declaration": "sha256-5a21b5005a8a67d01ee765d325bc0f883b68cdf035b02d644981bc62b4cadb45"
+    },
+    "./app-shell": {
+      "types": "./dist/types/app-shell.d.ts",
+      "import": "./dist/app-shell.js",
+      "declaration": "sha256-bebfd594519e710517cd1b14b9383f2aa989ba5e9c1fbf2783058cf85e6e5aca"
+    },
+    "./avatar": {
+      "types": "./dist/types/avatar.d.ts",
+      "import": "./dist/avatar.js",
+      "declaration": "sha256-02c2298bf4223b8548f6848710a25f6bd35fc2995c96d929f1c42bb9742db9bf"
+    },
+    "./breadcrumbs": {
+      "types": "./dist/types/breadcrumbs.d.ts",
+      "import": "./dist/breadcrumbs.js",
+      "declaration": "sha256-52855842ad055bb09338f81215c12af78568916c401e080315fa0234173db9cc"
+    },
+    "./button": {
+      "types": "./dist/types/button.d.ts",
+      "import": "./dist/button.js",
+      "declaration": "sha256-26f0d4a945e7680c17a24ca9380d558a57903a3b50fc573800dd8911e0bc8df6"
+    },
+    "./card": {
+      "types": "./dist/types/card.d.ts",
+      "import": "./dist/card.js",
+      "declaration": "sha256-5843fa49f7045e6ba92d0d7b765b6c6cab01c81411856f7966d372abeaf7698b"
+    },
+    "./chart": {
+      "types": "./dist/types/chart.d.ts",
+      "import": "./dist/chart.js",
+      "declaration": "sha256-9dfb09e1e41a51f13e7f9ef621d5bc9ffa6e4c65a5429270aea37dc413d56017"
+    },
+    "./checkbox": {
+      "types": "./dist/types/checkbox.d.ts",
+      "import": "./dist/checkbox.js",
+      "declaration": "sha256-ab413bc839cedfe9d607712fe20693566cc368154af1b54d7fdf3a167330880a"
+    },
+    "./combobox": {
+      "types": "./dist/types/combobox.d.ts",
+      "import": "./dist/combobox.js",
+      "declaration": "sha256-1b4222f01aa369ed6a0a6b6dffc5158b444c224bb69bc42d99b5c447a9251ad1"
+    },
+    "./command-palette": {
+      "types": "./dist/types/command-palette.d.ts",
+      "import": "./dist/command-palette.js",
+      "declaration": "sha256-afd83de737be28842a89c6aeb4a5a3a66b065f5b7112460f4bc1fce925d9e18d"
+    },
+    "./dialog": {
+      "types": "./dist/types/dialog.d.ts",
+      "import": "./dist/dialog.js",
+      "declaration": "sha256-7cee66da74fcac72d6537a45cd56902b89551427fa9de0a613e6fb06bf848f22"
+    },
+    "./drawer": {
+      "types": "./dist/types/drawer.d.ts",
+      "import": "./dist/drawer.js",
+      "declaration": "sha256-30369e5991da5a5ff5a862c1cb51e7ffb357a745fe37d088fbb53418ca1c3b0f"
+    },
+    "./dropdown": {
+      "types": "./dist/types/dropdown.d.ts",
+      "import": "./dist/dropdown.js",
+      "declaration": "sha256-99fe1b0e9e9f8026f0451c4aaa6b240e2871a56e156cdef593a733836a7a6c07"
+    },
+    "./empty-state": {
+      "types": "./dist/types/empty-state.d.ts",
+      "import": "./dist/empty-state.js",
+      "declaration": "sha256-8dfa319be8cf52ca3a8ac664c831e66d04028856a464bc775fd12b06769a3378"
+    },
+    "./fonts.css": "./dist/fonts.css",
+    "./foundation": {
+      "types": "./dist/types/foundation.d.ts",
+      "import": "./dist/foundation.js",
+      "declaration": "sha256-4a583d7830d27564924b343c8e8b756358c016fc226fd81731c5770a0ce8b593"
+    },
+    "./icon": {
+      "types": "./dist/types/icon.d.ts",
+      "import": "./dist/icon.js",
+      "declaration": "sha256-a9553d7bf4d9102a7623d54ca576e57786b9b3b6a2c141621e7a24fccc70d28c"
+    },
+    "./icon-button": {
+      "types": "./dist/types/icon-button.d.ts",
+      "import": "./dist/icon-button.js",
+      "declaration": "sha256-87646cbb47f4e85c96ffb44a5fcd2920b7e2eaf05abfc73bae42d836971cd148"
+    },
+    "./input": {
+      "types": "./dist/types/input.d.ts",
+      "import": "./dist/input.js",
+      "declaration": "sha256-ab0a02e42b24ab018b730473883d9752b85a02b0cd775b10274ecaee847bf9cc"
+    },
+    "./kpi": {
+      "types": "./dist/types/kpi.d.ts",
+      "import": "./dist/kpi.js",
+      "declaration": "sha256-682afe53971dc684f3483c09c6803024d806f8876473737339bbef0b010ccc46"
+    },
+    "./package.json": "./package.json",
+    "./page-layout": {
+      "types": "./dist/types/page-layout.d.ts",
+      "import": "./dist/page-layout.js",
+      "declaration": "sha256-53cda703f16130f2553df930dd1cee916c181ff7e5b850067943f3b9dd13b24d"
+    },
+    "./pagination": {
+      "types": "./dist/types/pagination.d.ts",
+      "import": "./dist/pagination.js",
+      "declaration": "sha256-dcc839f04d61e471a73c1e1f26941c0c411a1518746f2141f841c716f539647a"
+    },
+    "./progress": {
+      "types": "./dist/types/progress.d.ts",
+      "import": "./dist/progress.js",
+      "declaration": "sha256-ba202242213a1e29bc4bf8da7149c831c40e8d4ebb04bc256b1cfb5763e7fbed"
+    },
+    "./radio": {
+      "types": "./dist/types/radio.d.ts",
+      "import": "./dist/radio.js",
+      "declaration": "sha256-e4000062867ef3bedffbbfff0a65e986931a0dc3193631d64a5ac81c86971ca0"
+    },
+    "./section": {
+      "types": "./dist/types/section.d.ts",
+      "import": "./dist/section.js",
+      "declaration": "sha256-6929f683c353206f8c54cf677cc25553c5fadf8c7c36852bddb99d090b77a8f5"
+    },
+    "./segmented-control": {
+      "types": "./dist/types/segmented-control.d.ts",
+      "import": "./dist/segmented-control.js",
+      "declaration": "sha256-446e22d52760f16c0970cba3f2af5d7492d4ed18685f518cb6bca6b9f2e87b12"
+    },
+    "./select": {
+      "types": "./dist/types/select.d.ts",
+      "import": "./dist/select.js",
+      "declaration": "sha256-264ed9dd91424e5711b87fb129a91c0cde64fc138234ea474b96c560e9cc7425"
+    },
+    "./sidebar": {
+      "types": "./dist/types/sidebar.d.ts",
+      "import": "./dist/sidebar.js",
+      "declaration": "sha256-6c0f7a8e76a251d0909eb34c30ecb1861bb35d59d6010ecb4d7bd88035b0efe3"
+    },
+    "./skeleton": {
+      "types": "./dist/types/skeleton.d.ts",
+      "import": "./dist/skeleton.js",
+      "declaration": "sha256-8dd408af6dba14c54d8ffb6a3ac48f11ae38a06f357035503cb98acc368349f6"
+    },
+    "./status": {
+      "types": "./dist/types/status.d.ts",
+      "import": "./dist/status.js",
+      "declaration": "sha256-ed6efcb4c7cfa664c8ecc64866c2a3592942c07dbd5f50e68ddb8248908585b4"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./switch": {
+      "types": "./dist/types/switch.d.ts",
+      "import": "./dist/switch.js",
+      "declaration": "sha256-98288c1de1d165ed7c0f1ed1c5ee95ec14c326be77167e0b1f9b47dfe48ed1e3"
+    },
+    "./table": {
+      "types": "./dist/types/table.d.ts",
+      "import": "./dist/table.js",
+      "declaration": "sha256-737802d8d2c2c0791f74fcb15ffa0854f1595f620eaf89decbc098cbbc202611"
+    },
+    "./tabs": {
+      "types": "./dist/types/tabs.d.ts",
+      "import": "./dist/tabs.js",
+      "declaration": "sha256-f525dea91303087f6d24b36aa96f9a1bdef6bf3f983e72221307c81db5ef99c4"
+    },
+    "./tag": {
+      "types": "./dist/types/tag.d.ts",
+      "import": "./dist/tag.js",
+      "declaration": "sha256-b79d956bacf73c0f8e0bb5f9e3251c7a9e135bc3410fc60e783731911363642c"
+    },
+    "./theme": {
+      "types": "./dist/types/theme.d.ts",
+      "import": "./dist/theme.js",
+      "declaration": "sha256-d87d5214e3e898c4a70cc9705dc406025981471540452a717a7e48a93518bf72"
+    },
+    "./toast": {
+      "types": "./dist/types/toast.d.ts",
+      "import": "./dist/toast.js",
+      "declaration": "sha256-0010df9a37f005de08bb3df88f72d56e742ce0b9f4fbadfa0d3b07c9d17acd7e"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./tooltip": {
+      "types": "./dist/types/tooltip.d.ts",
+      "import": "./dist/tooltip.js",
+      "declaration": "sha256-3bbbf87d1343bd0680cbb3fdf94bf470d488aaa2e15c62e24e0fbc91995bad04"
+    },
+    "./topbar": {
+      "types": "./dist/types/topbar.d.ts",
+      "import": "./dist/topbar.js",
+      "declaration": "sha256-f1045d265adbcf21ec530c43b3edfc12d83998a77dbc0e2418260ed97a3729a2"
+    },
+    "./validation-summary": {
+      "types": "./dist/types/validation-summary.d.ts",
+      "import": "./dist/validation-summary.js",
+      "declaration": "sha256-04c40bc9aa9467d2491227db3c0a7fcffba7d221b75985a81c277537eaf45686"
+    }
+  }
+}

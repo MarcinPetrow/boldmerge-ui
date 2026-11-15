@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldMerge modal fixtures</title>
+    <script type="module" src="./modals.ts"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Dialog and Drawer</h1>
+      <div class="controls">
+        <button id="open-dialog" type="button">Edit project</button>
+        <button id="open-drawer" type="button">Open activity drawer</button>
+        <button id="outside" type="button">Outside control</button>
+      </div>
+
+      <bm-dialog id="edit-dialog" label="Edit project">
+        <h2 slot="header">Edit project</h2>
+        <label>Project name<input id="project-name" value="Northstar" /></label>
+        <p>Changes apply to the current workspace.</p>
+        <span slot="footer">Last updated today</span>
+        <button slot="actions" type="button" data-bm-dialog-close="cancel">Cancel</button>
+        <button slot="actions" type="button" data-bm-dialog-close="saved">Save changes</button>
+      </bm-dialog>
+
+      <section data-bm-theme="dark" data-bm-density="compact" data-bm-accent="violet">
+        <bm-drawer id="activity-drawer" label="Activity drawer" position="end">
+          <h2 slot="header">Recent activity</h2>
+          <label>Filter activity<input id="activity-filter" /></label>
+          <ul><li>Deployment completed</li><li>Member invited</li></ul>
+          <span slot="footer">Showing two events</span>
+          <button slot="actions" type="button" data-bm-drawer-close="done">Done</button>
+        </bm-drawer>
+      </section>
+
+      <bm-drawer id="push-drawer" mode="push" position="end" open label="Project inspector">
+        <article slot="content"><h2>Workspace content</h2><button id="content-action" type="button">Content action</button><p>Push mode keeps this content operable.</p></article>
+        <h2 slot="header">Inspector</h2>
+        <p>Owner: Platform team</p>
+        <button type="button">Inspect deployment</button>
+      </bm-drawer>
+      <p id="result" aria-live="polite">No modal action.</p>
+    </main>
+  </body>
+</html>

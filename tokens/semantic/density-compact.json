@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "semantic",
+  "context": { "density": "compact" },
+  "tokens": {
+    "density.control.standard": { "type": "dimension", "value": "{size.32}", "description": "Compact standard control height.", "status": "approved" },
+    "density.control.large": { "type": "dimension", "value": "{size.40}", "description": "Compact large control height.", "status": "approved" },
+    "density.gap.layout": { "type": "dimension", "value": "{size.16}", "description": "Compact general layout gap.", "status": "approved" },
+    "density.gap.section": { "type": "dimension", "value": "{size.24}", "description": "Compact section gap.", "status": "approved" },
+    "density.padding.card": { "type": "dimension", "value": "{size.12}", "description": "Compact card padding.", "status": "approved" }
+  }
+}

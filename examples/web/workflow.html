@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BoldMerge release operations integration workflow." />
+    <title>Release Operations · BoldMerge Web</title>
+  </head>
+  <body>
+    <bm-app-shell id="workflow-shell">
+      <bm-sidebar id="workflow-sidebar" slot="sidebar" label="Release operations navigation">
+        <a slot="header" class="workflow-brand" href="#overview" aria-label="Release Operations home"><span>BM</span><strong>Release Ops</strong></a>
+        <bm-sidebar-item href="#overview" label="Overview" active><span slot="icon" aria-hidden="true">⌂</span>Overview</bm-sidebar-item>
+        <bm-sidebar-item href="#releases" label="Releases"><span slot="icon" aria-hidden="true">⇧</span>Releases</bm-sidebar-item>
+        <bm-sidebar-item href="#quality" label="Quality"><span slot="icon" aria-hidden="true">✓</span>Quality</bm-sidebar-item>
+        <bm-sidebar-item href="#settings" label="Settings"><span slot="icon" aria-hidden="true">⚙</span>Settings</bm-sidebar-item>
+        <small slot="footer" class="workflow-sidebar-footer">Production · Europe</small>
+      </bm-sidebar>
+
+      <bm-topbar slot="topbar">
+        <bm-icon-button id="workflow-menu" slot="start" label="Open navigation" variant="ghost"><span aria-hidden="true">☰</span></bm-icon-button>
+        <strong slot="start">Platform workspace</strong>
+        <bm-status slot="notifications" tone="success">All systems operational</bm-status>
+        <bm-icon-button id="workflow-theme" slot="account" label="Toggle color theme" variant="ghost"><span aria-hidden="true">◐</span></bm-icon-button>
+        <bm-avatar slot="account" name="Ada Lovelace" size="small" availability="online" availability-label="Online"></bm-avatar>
+      </bm-topbar>
+
+      <main id="overview" class="workflow-main">
+        <bm-page-layout layout="contained">
+          <div slot="header" class="workflow-page-header">
+            <bm-breadcrumbs label="Release operations breadcrumbs"><bm-breadcrumb-item href="#home">Platform</bm-breadcrumb-item><bm-breadcrumb-item current>Release operations</bm-breadcrumb-item></bm-breadcrumbs>
+            <div><div><p class="workflow-eyebrow">Production control plane</p><h1>Release operations</h1><p>Review quality signals and approve the next production deployment.</p></div><bm-button id="approve-release">Approve release</bm-button></div>
+          </div>
+
+          <bm-section id="quality" label="Release readiness" separator>
+            <h2 slot="header">Release readiness</h2>
+            <bm-tag slot="actions">v2.14.0</bm-tag>
+            <div class="workflow-metrics">
+              <bm-card label="Change success rate"><bm-kpi id="success-kpi" label="Change success rate" value="98.7%" change="+1.4%" change-tone="favorable" comparison="versus previous release"></bm-kpi></bm-card>
+              <bm-card label="P95 latency"><bm-kpi id="latency-kpi" label="P95 latency" value="219 ms" change="−13 ms" change-tone="favorable" comparison="versus seven-day median"></bm-kpi></bm-card>
+              <bm-card label="Release checklist"><h3 slot="header">Release checklist</h3><bm-progress label="Release checks" value="7" max="8" segments="8" value-label="7 of 8 checks complete"></bm-progress><p class="workflow-muted">Final approval is waiting for an operator.</p></bm-card>
+            </div>
+          </bm-section>
+
+          <bm-section label="Deployment trend" separator>
+            <h2 slot="header">Deployment trend</h2>
+            <div class="workflow-insights">
+              <bm-card label="Weekly deployment chart"><bm-chart id="deployment-chart" label="Weekly deployments" summary="Successful deployments increased while failed deployments decreased over five weekdays"><table slot="table"><caption>Weekly deployment data</caption><thead><tr><th>Day</th><th>Successful</th><th>Failed</th></tr></thead><tbody><tr><th>Mon</th><td>18</td><td>4</td></tr><tr><th>Tue</th><td>24</td><td>3</td></tr><tr><th>Wed</th><td>22</td><td>5</td></tr><tr><th>Thu</th><td>31</td><td>2</td></tr><tr><th>Fri</th><td>36</td><td>1</td></tr></tbody></table></bm-chart></bm-card>
+              <bm-card label="Release details"><h3 slot="header">Candidate v2.14.0</h3><dl class="workflow-details"><div><dt>Commit</dt><dd><code>8f2c7ab</code></dd></div><div><dt>Owner</dt><dd>Platform team</dd></div><div><dt>Window</dt><dd>14:00–15:00 UTC</dd></div><div><dt>Risk</dt><dd><bm-status tone="success">Low</bm-status></dd></div></dl><bm-button id="view-runbook" variant="outline">View runbook</bm-button></bm-card>
+            </div>
+          </bm-section>
+
+          <bm-section id="releases" label="Recent deployments">
+            <h2 slot="header">Recent deployments</h2>
+            <bm-table id="deployment-table" row-activation><table><caption>Production deployment history</caption><thead><tr><th aria-sort="descending"><button data-bm-sort-key="deployment">Deployment</button></th><th>Status</th><th>Owner</th><th>Started</th><th data-bm-numeric>Duration</th><th>Actions</th></tr></thead><tbody><tr data-bm-row-key="v2.14.0"><td><strong>v2.14.0</strong></td><td><bm-status id="candidate-status" tone="warning">Awaiting approval</bm-status></td><td>Platform</td><td>Today, 13:42</td><td data-bm-numeric>—</td><td><bm-icon-button data-bm-row-action label="v2.14.0 actions" variant="ghost">⋯</bm-icon-button></td></tr><tr data-bm-row-key="v2.13.3"><td><strong>v2.13.3</strong></td><td><bm-status tone="success">Completed</bm-status></td><td>Core services</td><td>Yesterday, 16:08</td><td data-bm-numeric>8m 14s</td><td><bm-icon-button data-bm-row-action label="v2.13.3 actions" variant="ghost">⋯</bm-icon-button></td></tr><tr data-bm-row-key="v2.13.2"><td><strong>v2.13.2</strong></td><td><bm-status tone="success">Completed</bm-status></td><td>Platform</td><td>Nov 10, 09:21</td><td data-bm-numeric>11m 02s</td><td><bm-icon-button data-bm-row-action label="v2.13.2 actions" variant="ghost">⋯</bm-icon-button></td></tr></tbody></table></bm-table>
+            <div class="workflow-table-footer"><p id="workflow-result" aria-live="polite">Showing the latest production deployments.</p><bm-pagination id="deployment-pagination" page="1" page-size="25" total-items="68" label="Deployment history pages"></bm-pagination></div>
+          </bm-section>
+        </bm-page-layout>
+      </main>
+    </bm-app-shell>
+
+    <bm-dialog id="approval-dialog" label="Approve production release" dismissible>
+      <h2 slot="header">Approve v2.14.0?</h2>
+      <p>All automated checks have passed. Approval starts the production rollout during the current window.</p>
+      <bm-checkbox id="approval-confirmation">I reviewed the release evidence</bm-checkbox>
+      <span slot="footer" class="workflow-muted">This action is recorded in the deployment audit log.</span>
+      <bm-button slot="actions" variant="ghost" data-bm-dialog-close="cancel">Cancel</bm-button>
+      <bm-button id="confirm-approval" slot="actions" data-bm-dialog-close="approved" disabled>Approve and deploy</bm-button>
+    </bm-dialog>
+    <bm-toast-region id="workflow-notifications" label="Release notifications"></bm-toast-region>
+    <script type="module" src="/src/workflow.ts"></script>
+  </body>
+</html>

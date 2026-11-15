@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: var(--bm-size-32); color: var(--bm-color-text-primary); background: var(--bm-color-background); font-family: var(--bm-typography-family-ui); }
+main, form, .nested { display: grid; gap: var(--bm-layout-gap); }
+main { max-inline-size: 720px; margin-inline: auto; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--bm-size-12); }
+.nested { padding: var(--bm-layout-gap); background: var(--bm-color-background); border: var(--bm-size-1) solid var(--bm-color-border); border-radius: var(--bm-card-radius); }
+h1, h2 { margin: 0; }

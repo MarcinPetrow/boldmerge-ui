@@ -1,0 +1,8 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "primitive",
+  "context": { "accent": "blue" },
+  "tokens": {
+    "accent.seed": { "type": "color", "value": "#3b82f6", "description": "Approved reference Blue accent seed.", "status": "approved" }
+  }
+}

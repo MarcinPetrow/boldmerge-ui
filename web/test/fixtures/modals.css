@@ -1,0 +1,14 @@
+:root { color: var(--bm-color-text-primary); background: var(--bm-color-canvas); font-family: var(--bm-typography-family-ui); }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { inline-size: min(1080px, calc(100% - var(--bm-size-32))); margin-inline: auto; padding-block: var(--bm-section-gap); }
+h1, h2, p { margin-block: 0; }
+.controls { display: flex; flex-wrap: wrap; gap: var(--bm-size-12); margin-block: var(--bm-size-24); }
+button, input { min-block-size: var(--bm-button-height); padding-inline: var(--bm-button-padding-inline); color: var(--bm-color-text-primary); background: var(--bm-color-surface); border: var(--bm-size-1) solid var(--bm-color-border-strong); border-radius: var(--bm-button-radius); font: inherit; }
+label { display: grid; gap: var(--bm-size-8); }
+bm-dialog p, bm-drawer p, bm-drawer ul { color: var(--bm-color-text-secondary); }
+#push-drawer { margin-block-start: var(--bm-size-32); border: var(--bm-size-1) solid var(--bm-color-border); border-radius: var(--bm-card-radius); overflow: hidden; }
+#push-drawer article { min-block-size: 280px; padding: var(--bm-layout-gap); background: var(--bm-color-canvas); }
+#push-drawer article p { margin-block-start: var(--bm-size-12); }
+#push-drawer article button { margin-block-start: var(--bm-size-16); }
+#result { margin-block-start: var(--bm-size-24); color: var(--bm-color-text-secondary); }

@@ -1,0 +1,90 @@
+@import './fonts.css';
+
+/* BoldMerge Web document-level foundations. Canonical token declarations are prepended to dist/styles.css. */
+:where(html) {
+  box-sizing: border-box;
+  color: var(--bm-color-text-primary);
+  background: var(--bm-color-canvas);
+  font-family: var(--bm-typography-family-ui);
+  font-weight: var(--bm-typography-weight-regular);
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(*, *::before, *::after) {
+  box-sizing: inherit;
+}
+
+:where(body) {
+  min-block-size: 100vh;
+  margin: 0;
+  color: var(--bm-color-text-primary);
+  background: var(--bm-color-canvas);
+}
+
+:where(:focus-visible) {
+  outline: var(--bm-size-2) solid var(--bm-color-focus);
+  outline-offset: var(--bm-size-2);
+}
+
+:where(.bm-data, [data-bm-typography='data']) {
+  font-family: var(--bm-typography-family-data);
+  font-variant-numeric: tabular-nums;
+}
+
+/* bm-table deliberately keeps a real consumer-authored table in light DOM. */
+:where(bm-table > table) {
+  inline-size: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: var(--bm-color-text-primary);
+  background: var(--bm-color-surface);
+  font-family: var(--bm-typography-family-ui);
+}
+
+:where(bm-table > table th, bm-table > table td) {
+  block-size: var(--bm-table-row-height);
+  padding-inline: var(--bm-size-12);
+  border: 0;
+  border-block-end: var(--bm-table-divider-width) solid var(--bm-color-border);
+  text-align: start;
+  vertical-align: middle;
+}
+
+:where(bm-table > table th) {
+  color: var(--bm-color-text-secondary);
+  font-size: var(--bm-font-size-12);
+  font-weight: var(--bm-typography-weight-emphasis);
+}
+
+:where(bm-table > table [data-bm-numeric]) {
+  font-family: var(--bm-typography-family-data);
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+
+:where(bm-table > table [data-bm-sort-key]) {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bm-size-4);
+  min-block-size: var(--bm-button-height);
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+:where(bm-table > table th[aria-sort='ascending'] [data-bm-sort-key])::after { content: '↑'; }
+:where(bm-table > table th[aria-sort='descending'] [data-bm-sort-key])::after { content: '↓'; }
+:where(bm-table[row-activation] > table tbody tr[data-bm-activatable]) { cursor: pointer; }
+:where(bm-table[row-activation] > table tbody tr[data-bm-activatable]:hover) { background: var(--bm-color-surface-subtle); }
+:where(bm-table > table tr:focus-visible) { outline: var(--bm-size-2) solid var(--bm-color-focus); outline-offset: calc(-1 * var(--bm-size-2)); }
+
+@media (prefers-reduced-motion: reduce) {
+  :where(html:not([data-bm-motion='full'])) {
+    scroll-behavior: auto;
+  }
+}

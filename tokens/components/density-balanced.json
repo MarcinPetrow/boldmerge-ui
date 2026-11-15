@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "component",
+  "context": { "density": "balanced" },
+  "tokens": {
+    "button.height": { "type": "dimension", "value": "40px", "description": "Balanced button height.", "status": "approved" },
+    "button.padding.inline": { "type": "dimension", "value": "16px", "description": "Balanced button horizontal padding.", "status": "proposal" },
+    "table.row.height": { "type": "dimension", "value": "48px", "description": "Balanced table row height.", "status": "approved" },
+    "card.padding": { "type": "dimension", "value": "20px", "description": "Balanced card padding.", "status": "approved" },
+    "card.section.gap": { "type": "dimension", "value": "16px", "description": "Balanced gap between populated card regions.", "status": "proposal" },
+    "section.gap": { "type": "dimension", "value": "32px", "description": "Balanced section gap.", "status": "approved" },
+    "layout.gap": { "type": "dimension", "value": "24px", "description": "Balanced general layout gap.", "status": "approved" },
+    "sidebar.item.height": { "type": "dimension", "value": "40px", "description": "Balanced sidebar item height.", "status": "approved" },
+    "input.floating.height": { "type": "dimension", "value": "48px", "description": "Balanced floating-label input height.", "status": "approved" },
+    "input.padding.inline": { "type": "dimension", "value": "12px", "description": "Balanced floating-label input horizontal padding.", "status": "proposal" },
+    "input.error.padding.block": { "type": "dimension", "value": "8px", "description": "Balanced integrated error vertical padding.", "status": "proposal" },
+    "tab.height": { "type": "dimension", "value": "44px", "description": "Balanced tab height.", "status": "approved" },
+    "menu.item.height": { "type": "dimension", "value": "40px", "description": "Balanced menu item height.", "status": "approved" },
+    "dialog.padding": { "type": "dimension", "value": "24px", "description": "Provisional Balanced dialog padding.", "status": "proposal" },
+    "drawer.padding": { "type": "dimension", "value": "24px", "description": "Provisional Balanced drawer padding.", "status": "proposal" },
+    "toast.padding": { "type": "dimension", "value": "16px", "description": "Provisional Balanced toast padding.", "status": "proposal" },
+    "validation-summary.padding": { "type": "dimension", "value": "16px", "description": "Provisional Balanced validation summary padding.", "status": "proposal" }
+  }
+}

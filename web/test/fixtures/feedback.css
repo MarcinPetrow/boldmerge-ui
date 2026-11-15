@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px; color: var(--bm-color-text-primary); background: var(--bm-color-background); font-family: var(--bm-typography-family-ui); }
+main { display: grid; grid-template-columns: minmax(280px, 440px) minmax(280px, 420px); gap: 48px; align-items: start; }
+h1 { grid-column: 1 / -1; }
+form, #static-toasts { display: grid; gap: var(--bm-layout-gap); }

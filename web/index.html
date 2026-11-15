@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldMerge Web foundation</title>
+    <script type="module" src="/demo/main.ts"></script>
+  </head>
+  <body>
+    <main>
+      <header class="demo-header">
+        <div>
+          <p class="eyebrow">BoldMerge Adaptive</p>
+          <h1>Web foundation</h1>
+        </div>
+        <div class="controls" aria-label="Root foundation settings">
+          <label>Theme <select id="theme"><option>light</option><option>dark</option></select></label>
+          <label>Density <select id="density"><option>balanced</option><option>compact</option></select></label>
+          <label>Accent <select id="accent"><option>cyan</option><option>blue</option><option>violet</option><option>orange</option><option>green</option><option value="#c026d3">custom magenta</option></select></label>
+        </div>
+      </header>
+
+      <section class="grid" aria-label="Foundation examples">
+        <bm-theme class="panel" id="inherited">
+          <p class="eyebrow">Inherited root settings</p>
+          <h2>Viewport-independent density</h2>
+          <p>The card gap and sample control height change only when density changes—not when the viewport resizes.</p>
+          <div class="measurement"><span>Layout gap</span><output id="root-gap"></output></div>
+          <div class="sample-control">Sample control</div>
+        </bm-theme>
+
+        <bm-theme class="panel" id="nested" theme="dark" density="compact" accent="violet">
+          <p class="eyebrow">Nested override</p>
+          <h2>Dark · Compact · Violet</h2>
+          <p>This open-shadow-root scope overrides all three dimensions locally while the surrounding page remains independent.</p>
+          <div class="measurement"><span>Layout gap</span><output id="nested-gap"></output></div>
+          <div class="sample-control">Nested control</div>
+        </bm-theme>
+      </section>
+    </main>
+  </body>
+</html>

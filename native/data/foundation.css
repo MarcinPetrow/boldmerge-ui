@@ -1,0 +1,39 @@
+/* Runtime bridge over the generated, context-qualified canonical colors. */
+.bm-scope {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.bm-data {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.bm-density-balanced.bm-density-sample { min-height: 40px; padding: 20px; }
+.bm-density-compact.bm-density-sample { min-height: 32px; padding: 12px; }
+
+.bm-theme-light.bm-accent-cyan { color: @bm_light_cyan_color_text_primary; }
+.bm-theme-light.bm-accent-blue { color: @bm_light_blue_color_text_primary; }
+.bm-theme-light.bm-accent-violet { color: @bm_light_violet_color_text_primary; }
+.bm-theme-light.bm-accent-orange { color: @bm_light_orange_color_text_primary; }
+.bm-theme-light.bm-accent-green { color: @bm_light_green_color_text_primary; }
+.bm-theme-dark.bm-accent-cyan { color: @bm_dark_cyan_color_text_primary; }
+.bm-theme-dark.bm-accent-blue { color: @bm_dark_blue_color_text_primary; }
+.bm-theme-dark.bm-accent-violet { color: @bm_dark_violet_color_text_primary; }
+.bm-theme-dark.bm-accent-orange { color: @bm_dark_orange_color_text_primary; }
+.bm-theme-dark.bm-accent-green { color: @bm_dark_green_color_text_primary; }
+
+.bm-theme-light.bm-canvas { background-color: @bm_light_cyan_color_canvas; }
+.bm-theme-dark.bm-canvas { background-color: @bm_dark_cyan_color_canvas; }
+.bm-theme-light.bm-surface { background-color: @bm_light_cyan_color_surface; }
+.bm-theme-dark.bm-surface { background-color: @bm_dark_cyan_color_surface; }
+
+.bm-theme-light.bm-accent-cyan.bm-accent-sample { background-color: @bm_light_cyan_color_accent_solid; color: @bm_light_cyan_color_accent_on_solid; }
+.bm-theme-light.bm-accent-blue.bm-accent-sample { background-color: @bm_light_blue_color_accent_solid; color: @bm_light_blue_color_accent_on_solid; }
+.bm-theme-light.bm-accent-violet.bm-accent-sample { background-color: @bm_light_violet_color_accent_solid; color: @bm_light_violet_color_accent_on_solid; }
+.bm-theme-light.bm-accent-orange.bm-accent-sample { background-color: @bm_light_orange_color_accent_solid; color: @bm_light_orange_color_accent_on_solid; }
+.bm-theme-light.bm-accent-green.bm-accent-sample { background-color: @bm_light_green_color_accent_solid; color: @bm_light_green_color_accent_on_solid; }
+.bm-theme-dark.bm-accent-cyan.bm-accent-sample { background-color: @bm_dark_cyan_color_accent_solid; color: @bm_dark_cyan_color_accent_on_solid; }
+.bm-theme-dark.bm-accent-blue.bm-accent-sample { background-color: @bm_dark_blue_color_accent_solid; color: @bm_dark_blue_color_accent_on_solid; }
+.bm-theme-dark.bm-accent-violet.bm-accent-sample { background-color: @bm_dark_violet_color_accent_solid; color: @bm_dark_violet_color_accent_on_solid; }
+.bm-theme-dark.bm-accent-orange.bm-accent-sample { background-color: @bm_dark_orange_color_accent_solid; color: @bm_dark_orange_color_accent_on_solid; }
+.bm-theme-dark.bm-accent-green.bm-accent-sample { background-color: @bm_dark_green_color_accent_solid; color: @bm_dark_green_color_accent_on_solid; }
+

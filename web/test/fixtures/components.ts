@@ -1,0 +1,21 @@
+import '../../src/styles/tokens.css';
+import '../../src/styles/foundations.css';
+import '../../src/button.js';
+import '../../src/input.js';
+import '../../src/card.js';
+import '../../src/checkbox.js';
+import '../../src/radio.js';
+import '../../src/switch.js';
+import '../../src/select.js';
+import '../../src/icon-button.js';
+import '../../src/tag.js';
+import '../../src/status.js';
+import '../../src/page-layout.js';
+import '../../src/section.js';
+import '../../src/breadcrumbs.js';
+import '../../src/tabs.js';
+import '../../src/segmented-control.js';
+import './components.css';
+
+await Promise.all(['bm-button', 'bm-input', 'bm-card', 'bm-checkbox', 'bm-radio', 'bm-radio-group', 'bm-switch', 'bm-select', 'bm-option', 'bm-icon-button', 'bm-tag', 'bm-status', 'bm-page-layout', 'bm-section', 'bm-breadcrumbs', 'bm-breadcrumb-item', 'bm-tabs', 'bm-tab', 'bm-tab-panel', 'bm-segmented-control', 'bm-segment'].map((name) => customElements.whenDefined(name)));
+(window as Window & { componentsReady?: boolean }).componentsReady = true;

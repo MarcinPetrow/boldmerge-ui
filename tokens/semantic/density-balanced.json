@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "semantic",
+  "context": { "density": "balanced" },
+  "tokens": {
+    "density.control.standard": { "type": "dimension", "value": "{size.40}", "description": "Balanced standard control height.", "status": "approved" },
+    "density.control.large": { "type": "dimension", "value": "{size.48}", "description": "Balanced large control height.", "status": "approved" },
+    "density.gap.layout": { "type": "dimension", "value": "{size.24}", "description": "Balanced general layout gap.", "status": "approved" },
+    "density.gap.section": { "type": "dimension", "value": "{size.32}", "description": "Balanced section gap.", "status": "approved" },
+    "density.padding.card": { "type": "dimension", "value": "{size.20}", "description": "Balanced card padding.", "status": "approved" }
+  }
+}

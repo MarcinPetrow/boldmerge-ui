@@ -1,0 +1,20 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "primitive",
+  "tokens": {
+    "accent.strategy.lightness.50": { "type": "number", "value": 0.97, "description": "OKLCH lightness target for accent tone 50.", "status": "proposal" },
+    "accent.strategy.lightness.100": { "type": "number", "value": 0.93, "description": "OKLCH lightness target for accent tone 100.", "status": "proposal" },
+    "accent.strategy.lightness.200": { "type": "number", "value": 0.86, "description": "OKLCH lightness target for accent tone 200.", "status": "proposal" },
+    "accent.strategy.lightness.300": { "type": "number", "value": 0.76, "description": "OKLCH lightness target for accent tone 300.", "status": "proposal" },
+    "accent.strategy.lightness.400": { "type": "number", "value": 0.67, "description": "OKLCH lightness target for accent tone 400.", "status": "proposal" },
+    "accent.strategy.lightness.500": { "type": "number", "value": 0.58, "description": "OKLCH lightness target for accent tone 500.", "status": "proposal" },
+    "accent.strategy.lightness.600": { "type": "number", "value": 0.5, "description": "OKLCH lightness target for accent tone 600.", "status": "proposal" },
+    "accent.strategy.lightness.700": { "type": "number", "value": 0.42, "description": "OKLCH lightness target for accent tone 700.", "status": "proposal" },
+    "accent.strategy.lightness.800": { "type": "number", "value": 0.34, "description": "OKLCH lightness target for accent tone 800.", "status": "proposal" },
+    "accent.strategy.lightness.900": { "type": "number", "value": 0.27, "description": "OKLCH lightness target for accent tone 900.", "status": "proposal" },
+    "accent.strategy.lightness.950": { "type": "number", "value": 0.2, "description": "OKLCH lightness target for accent tone 950.", "status": "proposal" },
+    "accent.strategy.max-chroma.light": { "type": "number", "value": 0.12, "description": "Restrained maximum chroma for tones 50 through 200.", "status": "proposal" },
+    "accent.strategy.max-chroma.mid": { "type": "number", "value": 0.2, "description": "Restrained maximum chroma for tones 300 through 700.", "status": "proposal" },
+    "accent.strategy.max-chroma.dark": { "type": "number", "value": 0.14, "description": "Restrained maximum chroma for tones 800 through 950.", "status": "proposal" }
+  }
+}

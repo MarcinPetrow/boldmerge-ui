@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><script type="module" src="./table.ts"></script></head>
+  <body><main>
+    <h1>Projects</h1>
+    <bm-table id="table" row-activation>
+      <table>
+        <caption>Workspace projects</caption>
+        <thead><tr><th><input type="checkbox" data-bm-select-all aria-label="Select all projects" /></th><th aria-sort="none"><button data-bm-sort-key="name">Project</button></th><th>Status</th><th data-bm-numeric>Spend</th><th>Actions</th></tr></thead>
+        <tbody>
+          <tr data-bm-row-key="atlas"><td><input type="checkbox" data-bm-select aria-label="Select Atlas" /></td><td>Atlas</td><td>Operational</td><td data-bm-numeric>$12,400</td><td><button data-bm-row-action aria-label="Atlas actions">⋯</button></td></tr>
+          <tr data-bm-row-key="northstar"><td><input type="checkbox" data-bm-select aria-label="Select Northstar" /></td><td>Northstar</td><td>In review</td><td data-bm-numeric>$8,920</td><td><button data-bm-row-action aria-label="Northstar actions">⋯</button></td></tr>
+          <tr data-bm-row-key="archive"><td><input type="checkbox" data-bm-select aria-label="Select Archive" disabled /></td><td>Archive</td><td>Paused</td><td data-bm-numeric>$0</td><td><button data-bm-row-action aria-label="Archive actions">⋯</button></td></tr>
+        </tbody>
+      </table>
+      <span slot="loading">Loading projects…</span><span slot="empty">No projects.</span>
+    </bm-table>
+    <p id="result" aria-live="polite">Ready</p>
+    <section class="state-grid" aria-label="Table states">
+      <bm-table state="loading"><span slot="loading">Loading projects…</span></bm-table>
+      <bm-table state="empty"><span slot="empty">No projects match the filters.</span></bm-table>
+    </section>
+  </main></body>
+</html>

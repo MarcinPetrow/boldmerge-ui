@@ -1,0 +1,11 @@
+:root { color: var(--bm-color-text-primary); background: var(--bm-color-canvas); font-family: var(--bm-typography-family-ui); }
+body { margin: 0; }
+main { inline-size: min(920px, calc(100% - var(--bm-size-32))); margin-inline: auto; padding-block: var(--bm-section-gap); }
+h1, h2, h3, p { margin-block: 0; }
+main > h2 { margin-block-start: var(--bm-size-48); }
+.controls { display: flex; flex-wrap: wrap; gap: var(--bm-size-12); margin-block: var(--bm-size-24); }
+bm-dialog p, bm-drawer p, bm-drawer ul { color: var(--bm-color-text-secondary); }
+#push { margin-block-start: var(--bm-size-16); border: var(--bm-size-1) solid var(--bm-color-border); border-radius: var(--bm-card-radius); overflow: hidden; }
+#push article { min-block-size: 240px; padding: var(--bm-layout-gap); background: var(--bm-color-canvas); }
+#push article p { margin-block-start: var(--bm-size-12); }
+#result { margin-block-start: var(--bm-size-24); color: var(--bm-color-text-secondary); }

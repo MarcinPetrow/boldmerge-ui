@@ -1,0 +1,8 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "primitive",
+  "context": { "accent": "green" },
+  "tokens": {
+    "accent.seed": { "type": "color", "value": "#22c55e", "description": "Approved reference Green accent seed.", "status": "approved" }
+  }
+}

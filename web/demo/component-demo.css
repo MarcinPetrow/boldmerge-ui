@@ -1,0 +1,38 @@
+main {
+  inline-size: min(760px, calc(100% - var(--bm-size-32)));
+  margin-inline: auto;
+  padding-block: var(--bm-section-gap);
+}
+
+h1,
+h2,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  margin-block-end: var(--bm-section-gap);
+}
+
+.stack,
+.row {
+  display: flex;
+  gap: var(--bm-size-12);
+}
+
+.stack {
+  flex-direction: column;
+}
+
+.row {
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: var(--bm-color-text-secondary);
+  font-size: var(--bm-font-size-12);
+}
+
+bm-card {
+  max-inline-size: 560px;
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "primitive",
+  "tokens": {
+    "color.neutral.0": { "type": "color", "value": "#ffffff", "description": "Lightest neutral.", "status": "proposal" },
+    "color.neutral.25": { "type": "color", "value": "#f9fafb", "description": "Near-white neutral.", "status": "proposal" },
+    "color.neutral.50": { "type": "color", "value": "#f5f7f9", "description": "Light canvas neutral.", "status": "proposal" },
+    "color.neutral.100": { "type": "color", "value": "#eef1f4", "description": "Light subtle surface neutral.", "status": "proposal" },
+    "color.neutral.200": { "type": "color", "value": "#dce1e7", "description": "Light border neutral.", "status": "proposal" },
+    "color.neutral.300": { "type": "color", "value": "#c2c9d2", "description": "Strong light border neutral.", "status": "proposal" },
+    "color.neutral.500": { "type": "color", "value": "#697386", "description": "Muted content neutral.", "status": "proposal" },
+    "color.neutral.600": { "type": "color", "value": "#4f5968", "description": "Secondary light text neutral.", "status": "proposal" },
+    "color.neutral.800": { "type": "color", "value": "#252a33", "description": "Elevated dark surface neutral.", "status": "proposal" },
+    "color.neutral.850": { "type": "color", "value": "#1c2027", "description": "Dark surface neutral.", "status": "proposal" },
+    "color.neutral.900": { "type": "color", "value": "#15181e", "description": "Dark canvas and primary light text neutral.", "status": "proposal" },
+    "color.neutral.950": { "type": "color", "value": "#0d0f13", "description": "Darkest neutral.", "status": "proposal" },
+    "color.success.light": { "type": "color", "value": "#187a42", "description": "Success semantic foreground on light surfaces.", "status": "proposal" },
+    "color.success.dark": { "type": "color", "value": "#58d68d", "description": "Success semantic foreground on dark surfaces.", "status": "proposal" },
+    "color.warning.light": { "type": "color", "value": "#8a5700", "description": "Warning semantic foreground on light surfaces.", "status": "proposal" },
+    "color.warning.dark": { "type": "color", "value": "#f2bd5c", "description": "Warning semantic foreground on dark surfaces.", "status": "proposal" },
+    "color.error.light": { "type": "color", "value": "#bd3038", "description": "Error semantic foreground on light surfaces.", "status": "proposal" },
+    "color.error.dark": { "type": "color", "value": "#ff7b82", "description": "Error semantic foreground on dark surfaces.", "status": "proposal" }
+  }
+}

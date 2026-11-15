@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive catalog for the shipped BoldMerge Web foundations and components." />
+    <title>BoldMerge Web · Component catalog</title>
+  </head>
+  <body>
+    <bm-theme id="app-theme" theme="light" density="balanced" accent="cyan">
+      <div class="catalog-shell">
+        <aside class="sidebar">
+          <a class="brand" href="#overview" aria-label="BoldMerge catalog home"><span class="brand-mark">BM</span><span><strong>BoldMerge</strong><small>Web catalog</small></span></a>
+          <nav aria-label="Catalog sections"><a href="#foundations">Foundations</a><a href="#buttons">Button</a><a href="#icon-buttons">Icon Button</a><a href="#inputs">Input</a><a href="#selects">Select</a><a href="#comboboxes">Combobox</a><a href="#checkboxes">Checkbox</a><a href="#radios">Radio</a><a href="#switches">Switch</a><a href="#display">Tag &amp; Status</a><a href="#avatars">Avatar</a><a href="#layouts">Layout</a><a href="#tabs">Tabs</a><a href="#shell">App Shell</a><a href="#cards">Card</a><a href="#overlays">Tooltip &amp; Dropdown</a><a href="#modals">Dialog &amp; Drawer</a><a href="#commands">Command Palette</a><a href="#feedback">Toast &amp; Validation</a><a href="#empty-states">Empty State</a><a href="#skeletons">Skeleton</a><a href="#metrics">Progress &amp; KPI</a><a href="#charts">Charts</a><a href="#tables">Table</a><a href="#pagination">Pagination</a><a href="#composition">Composition</a></nav>
+          <p class="sidebar-note">Only components currently exported by <code>@boldmerge/web</code> are shown.</p>
+        </aside>
+
+        <div class="catalog-main">
+          <header class="topbar">
+            <div><span class="status-dot"></span> Interactive theme scope</div>
+            <div class="appearance-controls" aria-label="Global appearance controls">
+              <label>Theme<select id="theme"><option value="light">Light</option><option value="dark">Dark</option></select></label>
+              <label>Density<select id="density"><option value="balanced">Balanced</option><option value="compact">Compact</option></select></label>
+              <label>Accent<select id="accent"><option value="cyan">Cyan</option><option value="blue">Blue</option><option value="violet">Violet</option><option value="orange">Orange</option><option value="green">Green</option><option value="#c026d3">Custom magenta</option></select></label>
+            </div>
+          </header>
+
+          <main>
+            <section id="overview" class="hero"><p class="eyebrow">BoldMerge Adaptive · Web</p><h1>Foundation and component catalog</h1><p class="lede">A standalone consumer app exercising every shipped component, public variant, common state, independent density, and nested theme scope.</p><div class="hero-actions"><bm-button>Primary action</bm-button><bm-button variant="outline">View foundations</bm-button></div></section>
+
+            <section id="foundations" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">01 · System</p><h2>Foundations</h2></div><p>Light and Dark themes, Balanced and Compact densities, plus five accent presets and custom accent support.</p></div>
+              <h3>Accent presets</h3>
+              <div class="accent-grid">
+                <bm-theme accent="cyan"><div class="accent-tile"><span></span><strong>Cyan</strong><bm-button>Action</bm-button></div></bm-theme>
+                <bm-theme accent="blue"><div class="accent-tile"><span></span><strong>Blue</strong><bm-button>Action</bm-button></div></bm-theme>
+                <bm-theme accent="violet"><div class="accent-tile"><span></span><strong>Violet</strong><bm-button>Action</bm-button></div></bm-theme>
+                <bm-theme accent="orange"><div class="accent-tile"><span></span><strong>Orange</strong><bm-button>Action</bm-button></div></bm-theme>
+                <bm-theme accent="green"><div class="accent-tile"><span></span><strong>Green</strong><bm-button>Action</bm-button></div></bm-theme>
+              </div>
+              <h3>Theme × density</h3>
+              <div class="matrix">
+                <bm-theme theme="light" density="balanced" accent="cyan"><div class="matrix-cell"><code>Light / Balanced</code><bm-input label="Workspace" value="Atlas"></bm-input><bm-button>Continue</bm-button></div></bm-theme>
+                <bm-theme theme="light" density="compact" accent="cyan"><div class="matrix-cell"><code>Light / Compact</code><bm-input label="Workspace" value="Atlas"></bm-input><bm-button>Continue</bm-button></div></bm-theme>
+                <bm-theme theme="dark" density="balanced" accent="violet"><div class="matrix-cell"><code>Dark / Balanced</code><bm-input label="Workspace" value="Atlas"></bm-input><bm-button>Continue</bm-button></div></bm-theme>
+                <bm-theme theme="dark" density="compact" accent="violet"><div class="matrix-cell"><code>Dark / Compact</code><bm-input label="Workspace" value="Atlas"></bm-input><bm-button>Continue</bm-button></div></bm-theme>
+              </div>
+            </section>
+
+            <section id="buttons" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">02 · Action</p><h2>Button</h2></div><p>Four visual variants, destructive treatment, busy and unavailable states, and optional prefix or suffix content.</p></div>
+              <div class="example-block"><h3>Variants</h3><div class="component-row"><bm-button>Primary</bm-button><bm-button variant="secondary">Secondary</bm-button><bm-button variant="outline">Outline</bm-button><bm-button variant="ghost">Ghost</bm-button></div></div>
+              <div class="example-block"><h3>Destructive treatment</h3><div class="component-row"><bm-button treatment="destructive">Delete</bm-button><bm-button variant="secondary" treatment="destructive">Delete</bm-button><bm-button variant="outline" treatment="destructive">Delete</bm-button><bm-button variant="ghost" treatment="destructive">Delete</bm-button></div></div>
+              <div class="example-block"><h3>States and content</h3><div class="component-row"><bm-button loading>Saving</bm-button><bm-button disabled>Disabled</bm-button><bm-button><span slot="prefix" aria-hidden="true">＋</span>Create</bm-button><bm-button variant="outline">Next<span slot="suffix" aria-hidden="true">→</span></bm-button></div></div>
+            </section>
+
+            <section id="icon-buttons" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">03 · Action</p><h2>Icon Button</h2></div><p>Square action controls with explicit accessible labels and consumer-provided icon content.</p></div>
+              <div class="example-block"><h3>Variants</h3><div class="component-row"><bm-icon-button label="Add workspace"><span aria-hidden="true">＋</span></bm-icon-button><bm-icon-button label="Edit workspace" variant="secondary"><span aria-hidden="true">✎</span></bm-icon-button><bm-icon-button label="Settings" variant="outline"><span aria-hidden="true">⚙</span></bm-icon-button><bm-icon-button label="More actions" variant="ghost"><span aria-hidden="true">⋯</span></bm-icon-button></div></div>
+              <div class="example-block"><h3>States and treatment</h3><div class="component-row"><bm-icon-button label="Delete workspace" treatment="destructive"><span aria-hidden="true">×</span></bm-icon-button><bm-icon-button label="Delete workspace outline" variant="outline" treatment="destructive"><span aria-hidden="true">×</span></bm-icon-button><bm-icon-button label="Loading action" loading><span aria-hidden="true">↻</span></bm-icon-button><bm-icon-button label="Disabled action" disabled><span aria-hidden="true">−</span></bm-icon-button></div></div>
+            </section>
+
+            <section id="inputs" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">04 · Field</p><h2>Input</h2></div><p>Floating labels, native form participation, integrated error association, and leading or trailing composition.</p></div>
+              <div class="field-grid">
+                <div><span class="sample-label">Empty</span><bm-input label="Project name"></bm-input></div><div><span class="sample-label">Filled</span><bm-input label="Project name" value="Northstar"></bm-input></div>
+                <div><span class="sample-label">Required</span><bm-input label="Email address" type="email" required></bm-input></div><div><span class="sample-label">Read only</span><bm-input label="Account ID" value="BM-1042" readonly></bm-input></div>
+                <div><span class="sample-label">Disabled</span><bm-input label="Locked field" value="Unavailable" disabled></bm-input></div><div><span class="sample-label">Explicit error</span><bm-input label="Workspace URL" value="invalid url" error="Enter a valid workspace URL."></bm-input></div>
+                <div><span class="sample-label">Leading content</span><bm-input label="Search"><span slot="leading" aria-hidden="true">⌕</span></bm-input></div><div><span class="sample-label">Trailing content</span><bm-input label="Website" value="boldmerge.dev"><span slot="trailing" aria-hidden="true">↗</span></bm-input></div>
+              </div>
+            </section>
+
+            <section id="checkboxes" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">05 · Selection</p><h2>Checkbox</h2></div><p>Unchecked, checked, mixed, disabled, and required form states using the native interaction model.</p></div>
+              <div class="checkbox-grid">
+                <div><span class="sample-label">Unchecked</span><bm-checkbox>Product updates</bm-checkbox></div><div><span class="sample-label">Checked</span><bm-checkbox checked>Product updates</bm-checkbox></div><div><span class="sample-label">Indeterminate</span><bm-checkbox indeterminate>Some projects</bm-checkbox></div>
+                <div><span class="sample-label">Disabled</span><bm-checkbox disabled>Unavailable option</bm-checkbox></div><div><span class="sample-label">Checked + disabled</span><bm-checkbox checked disabled>Inherited setting</bm-checkbox></div><div><span class="sample-label">Required</span><bm-checkbox required>Accept workspace policy</bm-checkbox></div>
+              </div>
+            </section>
+
+            <section id="selects" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">06 · Field</p><h2>Select</h2></div><p>Classic native selection for short option lists with form participation, integrated validation, and declarative options.</p></div>
+              <div class="field-grid">
+                <div><span class="sample-label">Default selection</span><bm-select label="Region" value="eu"><bm-option value="us">United States</bm-option><bm-option value="eu">Europe</bm-option><bm-option value="apac">Asia Pacific</bm-option></bm-select></div>
+                <div><span class="sample-label">Required placeholder</span><bm-select label="Environment" placeholder="Choose environment" required><bm-option value="dev">Development</bm-option><bm-option value="staging">Staging</bm-option><bm-option value="prod">Production</bm-option></bm-select></div>
+                <div><span class="sample-label">Disabled option</span><bm-select label="Plan" value="team"><bm-option value="starter">Starter</bm-option><bm-option value="team">Team</bm-option><bm-option value="enterprise" disabled>Enterprise — contact sales</bm-option></bm-select></div>
+                <div><span class="sample-label">Disabled control</span><bm-select label="Managed region" value="eu" disabled><bm-option value="eu">Europe</bm-option></bm-select></div>
+                <div><span class="sample-label">Explicit error</span><bm-select label="Legacy environment" value="legacy" error="This environment is no longer available."><bm-option value="legacy">Legacy</bm-option></bm-select></div>
+              </div>
+            </section>
+
+            <section id="comboboxes" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">07 · Searchable field</p><h2>Combobox</h2></div><p>Editable filtering for longer lists with form participation, disabled-option skipping, IME-safe input, and complete listbox keyboard navigation.</p></div>
+              <div class="field-grid"><div><span class="sample-label">Searchable required list</span><bm-combobox id="catalog-combobox" name="catalog-region" label="Deployment region" placeholder="Search regions" required><bm-option value="us">United States</bm-option><bm-option value="apac" disabled>Asia Pacific — unavailable</bm-option><bm-option value="eu">Europe</bm-option><bm-option value="sa">South America</bm-option><span slot="empty">No matching regions</span></bm-combobox><p id="catalog-combobox-result" class="muted" aria-live="polite">No region selected.</p></div><bm-theme theme="dark" density="compact" accent="violet"><div class="nested-combobox"><span class="sample-label">Nested Dark / Compact</span><bm-combobox label="Team" value="platform"><bm-option value="design">Design</bm-option><bm-option value="platform">Platform</bm-option><bm-option value="security">Security</bm-option></bm-combobox></div></bm-theme></div>
+            </section>
+
+            <section id="radios" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">07 · Selection</p><h2>Radio Group</h2></div><p>Exclusive form selection with an explicit group label, roving tab stop, and Arrow/Home/End navigation.</p></div>
+              <div class="field-grid">
+                <div><span class="sample-label">Default selection</span><bm-radio-group name="catalog-plan" label="Deployment plan" value="team"><bm-radio value="starter">Starter</bm-radio><bm-radio value="team">Team</bm-radio><bm-radio value="enterprise">Enterprise</bm-radio></bm-radio-group></div>
+                <div><span class="sample-label">Required + disabled option</span><bm-radio-group name="catalog-region" label="Primary region" required><bm-radio value="us">United States</bm-radio><bm-radio value="eu">Europe</bm-radio><bm-radio value="apac" disabled>Asia Pacific</bm-radio></bm-radio-group></div>
+                <div><span class="sample-label">Disabled group</span><bm-radio-group label="Billing cycle" value="monthly" disabled><bm-radio value="monthly">Monthly</bm-radio><bm-radio value="yearly">Yearly</bm-radio></bm-radio-group></div>
+              </div>
+            </section>
+
+            <section id="switches" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">08 · Binary control</p><h2>Switch</h2></div><p>Native keyboard and form behavior exposed with switch semantics and reduced-motion support.</p></div>
+              <div class="checkbox-grid">
+                <div><span class="sample-label">Off</span><bm-switch>Automatic updates</bm-switch></div><div><span class="sample-label">On</span><bm-switch checked>Deployment alerts</bm-switch></div><div><span class="sample-label">Required</span><bm-switch required>Enable security policy</bm-switch></div>
+                <div><span class="sample-label">Disabled</span><bm-switch disabled>Unavailable setting</bm-switch></div><div><span class="sample-label">On + disabled</span><bm-switch checked disabled>Managed by organization</bm-switch></div>
+              </div>
+            </section>
+
+            <section id="display" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">09 · Display</p><h2>Tag &amp; Status</h2></div><p>Compact noninteractive labels and semantic status text that never relies on color alone.</p></div>
+              <div class="example-block"><h3>Tags</h3><div class="component-row"><bm-tag>Enterprise</bm-tag><bm-tag><span slot="prefix" aria-hidden="true">◆</span>Featured</bm-tag><bm-tag>Design system</bm-tag><bm-theme accent="orange"><bm-tag>Local accent</bm-tag></bm-theme></div></div>
+              <div class="example-block"><h3>Status tones</h3><div class="component-row"><bm-status>Draft</bm-status><bm-status tone="accent">In review</bm-status><bm-status tone="success">Operational</bm-status><bm-status tone="warning">Degraded</bm-status><bm-status tone="error">Failed</bm-status></div></div>
+            </section>
+
+            <section id="avatars" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">09A · Identity</p><h2>Avatar &amp; Avatar Group</h2></div><p>Approved people and organization geometry, deterministic initials, supplemental availability, and explicit group overflow.</p></div>
+              <div class="avatar-catalog"><div><span class="sample-label">Sizes and availability</span><div class="component-row"><bm-avatar name="Ada Lovelace" size="small"></bm-avatar><bm-avatar name="Grace Hopper"></bm-avatar><bm-avatar name="Katherine Johnson" size="large" availability="online" availability-label="Online"></bm-avatar><bm-avatar name="Margaret Hamilton" size="xlarge" availability="busy" availability-label="Do not disturb"></bm-avatar></div></div><div><span class="sample-label">Organization and group</span><div class="component-row"><bm-avatar name="BoldMerge" kind="organization" size="large"></bm-avatar><bm-avatar-group label="Platform team" overflow-count="3" overflow-label="3 more team members"><bm-avatar name="Ada Lovelace"></bm-avatar><bm-avatar name="Grace Hopper"></bm-avatar><bm-avatar name="Katherine Johnson"></bm-avatar></bm-avatar-group></div></div></div>
+            </section>
+
+            <section id="layouts" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">10 · Layout</p><h2>Page Layout, Section &amp; Breadcrumbs</h2></div><p>Open application composition with explicit layout modes, density-aware sections, and native breadcrumb navigation.</p></div>
+              <div class="example-block"><h3>Breadcrumbs</h3><bm-breadcrumbs label="Catalog breadcrumbs"><bm-breadcrumb-item href="#overview">Catalog</bm-breadcrumb-item><bm-breadcrumb-item href="#layouts">Application shell</bm-breadcrumb-item><bm-breadcrumb-item current>Layout primitives</bm-breadcrumb-item></bm-breadcrumbs></div>
+              <div class="layout-demo">
+                <span class="sample-label">Contained</span>
+                <bm-page-layout layout="contained"><div slot="header"><bm-status tone="accent">Contained page</bm-status></div><bm-section label="Contained section" separator><h3 slot="header">Project overview</h3><bm-button slot="actions" variant="outline">Configure</bm-button><p class="muted">Content is capped by the canonical provisional maximum width.</p><span slot="footer" class="muted">32px Balanced section spacing</span></bm-section></bm-page-layout>
+              </div>
+              <div class="layout-demo">
+                <span class="sample-label">Split</span>
+                <bm-page-layout layout="split"><div slot="header"><bm-status tone="success">Production</bm-status></div><bm-section label="Deployment details"><h3 slot="header">Deployment</h3><p class="muted">Primary content remains flexible while the aside uses its canonical width.</p></bm-section><bm-card slot="aside" label="Split layout aside"><h3 slot="header">Details</h3><p class="muted">Owner: Platform team</p></bm-card></bm-page-layout>
+              </div>
+            </section>
+
+            <section id="tabs" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">11 · Navigation</p><h2>Tabs &amp; Segmented Control</h2></div><p>Exclusive selection with roving focus, explicit relationships, keyboard navigation, and density-aware geometry.</p></div>
+              <div class="selection-demo">
+                <span class="sample-label">Tabs</span>
+                <bm-tabs label="Workspace views" value="overview"><bm-tab slot="tab" value="overview">Overview</bm-tab><bm-tab slot="tab" value="activity">Activity</bm-tab><bm-tab slot="tab" value="members">Members</bm-tab><bm-tab slot="tab" value="audit" disabled>Audit log</bm-tab><bm-tab-panel value="overview"><p class="muted">Overview panel with linked tab and panel semantics.</p></bm-tab-panel><bm-tab-panel value="activity"><p class="muted">Recent workspace activity.</p></bm-tab-panel><bm-tab-panel value="members"><p class="muted">Workspace members.</p></bm-tab-panel><bm-tab-panel value="audit"><p class="muted">Audit content.</p></bm-tab-panel></bm-tabs>
+              </div>
+              <div class="selection-demo">
+                <span class="sample-label">Segmented modes</span>
+                <bm-segmented-control label="View mode" value="list"><bm-segment value="list">List</bm-segment><bm-segment value="board">Board</bm-segment><bm-segment value="timeline">Timeline</bm-segment><bm-segment value="map" disabled>Map</bm-segment></bm-segmented-control>
+              </div>
+            </section>
+
+            <section id="cards" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">12 · Container</p><h2>Card</h2></div><p>Flat, open composition with optional header, action, content, and footer slots.</p></div>
+              <div class="card-grid">
+                <bm-card label="Content-only card"><div class="card-copy"><span class="icon-tile">A</span><h3>Content only</h3><p>Cards remain deliberately flat and let their content define the hierarchy.</p></div></bm-card>
+                <bm-card label="Card with all regions"><h3 slot="header">Release channel</h3><bm-button slot="actions" variant="ghost">Edit</bm-button><div class="card-copy"><p>Production receives signed, stable builds.</p><bm-checkbox checked>Automatic updates</bm-checkbox></div><p slot="footer" class="muted">Updated two minutes ago</p></bm-card>
+                <bm-theme theme="dark" density="compact" accent="orange"><bm-card label="Nested theme card"><h3 slot="header">Scoped appearance</h3><div class="card-copy"><p>This card remains Dark, Compact, and Orange when global controls change.</p><bm-button>Scoped action</bm-button></div></bm-card></bm-theme>
+              </div>
+            </section>
+
+            <section id="shell" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">13 · Application shell</p><h2>Sidebar, Topbar &amp; App Shell</h2></div><p>Responsive application composition with explicit desktop collapse, mobile drawer state, and density independent from viewport width.</p></div>
+              <bm-app-shell id="catalog-app-shell" class="shell-preview">
+                <bm-sidebar slot="sidebar" label="Preview navigation">
+                  <strong slot="header" class="preview-brand">BM</strong>
+                  <bm-sidebar-item href="#shell" active><span slot="icon" aria-hidden="true">⌂</span>Overview</bm-sidebar-item>
+                  <bm-sidebar-item href="#cards"><span slot="icon" aria-hidden="true">◇</span>Projects</bm-sidebar-item>
+                  <bm-sidebar-item href="#composition"><span slot="icon" aria-hidden="true">⚙</span>Settings</bm-sidebar-item>
+                  <small slot="footer">Adaptive shell</small>
+                </bm-sidebar>
+                <bm-topbar slot="topbar"><strong slot="start">Workspace</strong><bm-button id="catalog-collapse" slot="account" variant="ghost">Toggle sidebar</bm-button></bm-topbar>
+                <div class="shell-preview-content"><bm-status tone="success">Operational</bm-status><h3>Application workspace</h3><p class="muted">The focused shell demo at <code>/demo/shell.html</code> also proves the mobile drawer and focus restoration.</p></div>
+              </bm-app-shell>
+            </section>
+
+            <section id="overlays" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">14 · Complex interaction</p><h2>Tooltip &amp; Dropdown</h2></div><p>Viewport-aware descriptive overlays and non-modal action menus with complete keyboard navigation and density-aware geometry.</p></div>
+              <div class="overlay-demo">
+                <div><span class="sample-label">Hover or focus</span><bm-tooltip content="Create a new project"><bm-button variant="outline">Create project</bm-button></bm-tooltip></div>
+                <div><span class="sample-label">Grouped actions</span><bm-dropdown id="catalog-actions" label="Project actions"><span slot="trigger">Project actions</span><bm-dropdown-group label="Edit actions"><bm-dropdown-item value="rename"><span slot="prefix" aria-hidden="true">✎</span>Rename</bm-dropdown-item><bm-dropdown-item value="duplicate">Duplicate</bm-dropdown-item><bm-dropdown-item value="archive" disabled>Archive unavailable</bm-dropdown-item></bm-dropdown-group><bm-dropdown-group label="Destructive actions" destructive><bm-dropdown-item value="delete">Delete project</bm-dropdown-item></bm-dropdown-group></bm-dropdown></div>
+                <p id="catalog-action-result" class="muted" aria-live="polite">No action selected.</p>
+              </div>
+              <bm-theme class="overlay-theme" theme="dark" density="compact" accent="violet"><div class="overlay-demo"><span class="sample-label">Nested Dark / Compact</span><bm-tooltip content="Locally themed tooltip"><bm-button variant="outline">Local tooltip</bm-button></bm-tooltip><bm-dropdown label="Local actions"><span slot="trigger">Local actions</span><bm-dropdown-item value="inspect">Inspect</bm-dropdown-item><bm-dropdown-item value="export">Export</bm-dropdown-item></bm-dropdown></div></bm-theme>
+            </section>
+
+            <section id="modals" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">15 · Modal composition</p><h2>Dialog &amp; Drawer</h2></div><p>Native modal focus behavior for compact dialogs and overlay drawers, plus an explicit non-modal Push master-detail composition.</p></div>
+              <div class="modal-actions"><div><span class="sample-label">Compact dialog</span><bm-button id="catalog-dialog-trigger">Edit project</bm-button></div><div><span class="sample-label">Overlay drawer</span><bm-button id="catalog-drawer-trigger" variant="outline">Open activity</bm-button></div></div>
+              <bm-dialog id="catalog-dialog" label="Edit project"><h3 slot="header">Edit project</h3><bm-input id="catalog-dialog-name" label="Project name" value="Northstar"></bm-input><p class="muted">Changes apply to the current workspace.</p><span slot="footer" class="muted">Last updated today</span><bm-button slot="actions" variant="ghost" data-bm-dialog-close="cancel">Cancel</bm-button><bm-button slot="actions" data-bm-dialog-close="saved">Save changes</bm-button></bm-dialog>
+              <bm-drawer id="catalog-drawer" label="Recent activity" data-bm-theme="dark" data-bm-density="compact" data-bm-accent="violet"><h3 slot="header">Recent activity</h3><bm-input id="catalog-drawer-filter" label="Filter activity"></bm-input><p class="muted">Deployment completed · Member invited</p><span slot="footer" class="muted">Two events</span><bm-button slot="actions" data-bm-drawer-close="done">Done</bm-button></bm-drawer>
+              <div class="push-preview"><span class="sample-label">Push mode</span><bm-drawer mode="push" open label="Project inspector"><article slot="content"><h3>Workspace content</h3><p class="muted">The master region remains operable on desktop.</p></article><h3 slot="header">Inspector</h3><p class="muted">Owner: Platform team</p><bm-button variant="outline">Inspect deployment</bm-button></bm-drawer></div>
+              <p id="catalog-modal-result" class="muted" aria-live="polite">No modal action.</p>
+            </section>
+
+            <section id="feedback" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">16 · Feedback</p><h2>Toast &amp; Validation Summary</h2></div><p>Local, bounded notification queues and a summary derived from the actual form controls rather than a second validation schema.</p></div>
+              <div class="feedback-grid"><div class="example-block"><h3>Toast tones</h3><div class="toast-stack"><bm-toast title="Settings saved" message="Workspace preferences are current." tone="success" duration="0"></bm-toast><bm-toast title="Deployment delayed" message="Review the connection and retry." tone="warning" duration="0"></bm-toast></div><div class="component-row"><bm-button id="catalog-toast-success">Queue success</bm-button><bm-button id="catalog-toast-error" treatment="destructive">Queue persistent error</bm-button></div></div><bm-theme theme="dark" density="compact" accent="violet"><div class="nested-feedback"><span class="sample-label">Nested Dark / Compact</span><bm-toast title="Scoped notification" message="Tokens cascade through the open shadow root." tone="neutral" duration="0"></bm-toast></div></bm-theme></div>
+              <bm-toast-region id="catalog-notifications"></bm-toast-region>
+            </section>
+
+            <section id="empty-states" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">16A · Feedback</p><h2>Empty State</h2></div><p>A neutral, named region with optional consumer-provided icon and action, without a default illustration or hidden behavior.</p></div>
+              <div class="empty-state-catalog"><bm-empty-state heading="No projects yet" description="Create a project to start tracking deployments."><span slot="icon" aria-hidden="true">◇</span><bm-button slot="action">Create project</bm-button></bm-empty-state><bm-theme theme="dark" density="compact" accent="violet"><bm-empty-state heading="No search results"><span slot="description">Try adjusting your filters or search phrase.</span><bm-button slot="action" variant="outline">Clear filters</bm-button></bm-empty-state></bm-theme></div>
+            </section>
+
+            <section id="skeletons" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">16B · Feedback</p><h2>Skeleton</h2></div><p>Text, rectangle, and circle placeholders with a 1.5s shimmer, static reduced-motion fallback, and one explicit loading label per busy region.</p></div>
+              <div class="skeleton-catalog"><section class="skeleton-sample" aria-busy="true" aria-label="Loading project"><div class="skeleton-identity"><bm-skeleton shape="circle" label="Loading project"></bm-skeleton><div><bm-skeleton></bm-skeleton><bm-skeleton class="skeleton-short"></bm-skeleton></div></div><bm-skeleton class="skeleton-preview" shape="rectangle"></bm-skeleton></section><bm-theme theme="dark" density="compact" accent="violet"><section class="skeleton-sample" aria-busy="true" aria-label="Loading report"><bm-skeleton shape="rectangle" label="Loading report"></bm-skeleton><bm-skeleton></bm-skeleton><bm-skeleton class="skeleton-short"></bm-skeleton></section></bm-theme></div>
+            </section>
+
+            <section id="metrics" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">16C · Visualization</p><h2>Progress &amp; KPI</h2></div><p>Exact progress semantics independent from segmented approximation, and application-defined KPI change meaning with decorative 1.5px sparklines.</p></div>
+              <div class="metric-catalog"><article class="metric-panel"><span class="sample-label">Segmented progress</span><bm-progress label="Storage used" value="37" value-label="37 GB of 100 GB"></bm-progress><bm-progress label="Migration" value="3" max="8" segments="8" value-label="3 of 8 steps"></bm-progress></article><article class="metric-panel"><span class="sample-label">Key metrics</span><bm-kpi id="catalog-revenue" label="Monthly recurring revenue" value="$128,400" change="+8.2%" change-tone="favorable" comparison="versus last month"></bm-kpi><bm-kpi id="catalog-errors" label="Failed deployments" value="12" change="−25%" change-tone="favorable" comparison="fewer than last week"></bm-kpi></article><bm-theme theme="dark" density="compact" accent="violet"><article class="metric-panel metric-nested"><span class="sample-label">Nested Dark / Compact</span><bm-kpi id="catalog-latency" label="P95 latency" value="248 ms" change="+18 ms" change-tone="unfavorable" comparison="versus target"></bm-kpi><bm-progress label="Quarter target" value="72" value-label="72% complete"></bm-progress></article></bm-theme></div>
+            </section>
+
+            <section id="charts" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">16D · Visualization</p><h2>Charts</h2></div><p>High-contrast multi-series lines with visible points, keyboard category navigation, aligned tooltips, and a consumer-authored tabular alternative.</p></div>
+              <div class="chart-catalog"><article class="chart-panel"><bm-chart id="catalog-deployments" label="Weekly deployments" summary="Successful and failed deployments over five weekdays"><table slot="table"><caption>Weekly deployment data</caption><thead><tr><th>Day</th><th>Successful</th><th>Failed</th></tr></thead><tbody><tr><th>Mon</th><td>18</td><td>4</td></tr><tr><th>Tue</th><td>24</td><td>3</td></tr><tr><th>Wed</th><td>22</td><td>5</td></tr><tr><th>Thu</th><td>31</td><td>2</td></tr><tr><th>Fri</th><td>36</td><td>1</td></tr></tbody></table></bm-chart></article><bm-theme theme="dark" density="compact" accent="violet"><article class="chart-panel"><bm-chart id="catalog-chart-latency" label="Service latency" summary="P50 and P95 latency in milliseconds"></bm-chart></article></bm-theme></div>
+            </section>
+
+            <section id="commands" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">17 · Central search</p><h2>Command Palette</h2></div><p>Application-owned grouped commands, modal keyboard navigation, opt-in Ctrl/⌘+K, and explicit selection events without a global command registry.</p></div>
+              <div class="example-block"><h3>Working palette</h3><div class="component-row"><bm-button id="catalog-command-trigger">Open commands</bm-button><span class="muted">or press Ctrl/⌘+K</span></div><p id="catalog-command-result" class="muted" aria-live="polite">No command selected.</p></div>
+              <bm-command-palette id="catalog-command-palette" shortcut label="Catalog commands"><bm-command-group label="Components"><bm-command value="buttons" keywords="actions">Go to Buttons</bm-command><bm-command value="comboboxes" keywords="searchable field">Go to Combobox</bm-command><bm-command value="future" disabled>Unavailable future command</bm-command></bm-command-group><bm-command-group label="Appearance"><bm-command value="toggle-theme" keywords="dark light">Toggle theme</bm-command></bm-command-group></bm-command-palette>
+            </section>
+
+            <section id="tables" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">18 · Data</p><h2>Table</h2></div><p>Native table semantics with horizontal dividers, application-controlled sorting, selection, row activation, and independent cell actions.</p></div>
+              <bm-table id="catalog-table" row-activation><table><caption>Workspace projects</caption><thead><tr><th><input type="checkbox" data-bm-select-all aria-label="Select all projects" /></th><th aria-sort="none"><button data-bm-sort-key="name">Project</button></th><th>Status</th><th data-bm-numeric>Monthly spend</th><th>Actions</th></tr></thead><tbody><tr data-bm-row-key="atlas"><td><input type="checkbox" data-bm-select aria-label="Select Atlas" /></td><td>Atlas</td><td><bm-status tone="success">Operational</bm-status></td><td data-bm-numeric>$12,400</td><td><bm-icon-button data-bm-row-action label="Atlas actions" variant="ghost">⋯</bm-icon-button></td></tr><tr data-bm-row-key="northstar"><td><input type="checkbox" data-bm-select aria-label="Select Northstar" /></td><td>Northstar</td><td><bm-status tone="accent">In review</bm-status></td><td data-bm-numeric>$8,920</td><td><bm-icon-button data-bm-row-action label="Northstar actions" variant="ghost">⋯</bm-icon-button></td></tr></tbody></table></bm-table>
+              <p id="catalog-table-result" class="muted" aria-live="polite">Ready.</p>
+            </section>
+
+            <section id="pagination" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">19 · Data navigation</p><h2>Pagination</h2></div><p>Application-owned paging with a visible range, bounded Previous/Next controls, total pages, and canonical page size 25.</p></div>
+              <div class="example-block"><h3>Working range</h3><bm-pagination id="catalog-pagination" page="4" total-items="236"></bm-pagination><p id="catalog-pagination-result" class="muted" aria-live="polite">Showing page 4 of 10.</p></div>
+              <bm-theme theme="dark" density="compact" accent="violet"><div class="nested-feedback"><span class="sample-label">Nested Dark / Compact</span><bm-pagination page="8" total-items="450"></bm-pagination></div></bm-theme>
+            </section>
+
+            <section id="composition" class="catalog-section">
+              <div class="section-heading"><div><p class="kicker">20 · Example</p><h2>Working composition</h2></div><p>A real form demonstrating component interoperability, native validity, and actionable error summary.</p></div>
+              <bm-card class="form-card" label="Create a workspace"><h3 slot="header">Create workspace</h3><bm-button slot="actions" variant="ghost">Help</bm-button><form id="workspace-form" class="form-stack" novalidate><bm-validation-summary id="workspace-summary" for="workspace-form"></bm-validation-summary><bm-input label="Workspace name" name="workspace" required></bm-input><bm-input label="Owner email" name="email" type="email" required></bm-input><bm-select name="region" label="Region" placeholder="Choose a region" required><bm-option value="us">United States</bm-option><bm-option value="eu">Europe</bm-option><bm-option value="apac">Asia Pacific</bm-option></bm-select><bm-radio-group name="plan" label="Plan" value="team" required><bm-radio value="starter">Starter</bm-radio><bm-radio value="team">Team</bm-radio></bm-radio-group><bm-switch name="alerts" value="enabled" checked>Deployment alerts</bm-switch><bm-checkbox name="terms" required>Accept workspace policy</bm-checkbox><div class="component-row"><bm-button type="submit">Create workspace</bm-button><bm-button variant="outline" type="reset">Reset</bm-button></div></form><p id="result" slot="footer" class="muted" aria-live="polite">Ready.</p></bm-card>
+            </section>
+          </main>
+          <footer class="page-footer"><strong>BoldMerge Web catalog</strong><span>Lit · Web Components · Canonical tokens</span></footer>
+        </div>
+      </div>
+    </bm-theme>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+html, body { min-block-size: 100%; margin: 0; }
+body { color: var(--bm-color-text-primary); background: var(--bm-color-canvas); font-family: var(--bm-typography-family-ui); }
+.brand { display: grid; place-items: center; inline-size: 40px; block-size: 40px; margin: 0 auto var(--bm-size-16); color: var(--bm-color-accent-on-solid); background: var(--bm-color-accent-solid); border-radius: var(--bm-radius-8); }
+bm-sidebar small { display: block; overflow: hidden; color: var(--bm-color-text-secondary); white-space: nowrap; }
+main { min-inline-size: 0; }
+h1, h2 { margin: 0; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--bm-size-16); }
+.scope { padding: var(--bm-size-16); color: var(--bm-color-text-primary); background: var(--bm-color-surface); border-radius: var(--bm-card-radius); }
+@media (max-width: 768px) { .cards { grid-template-columns: 1fr; } #collapse { display: none; } }

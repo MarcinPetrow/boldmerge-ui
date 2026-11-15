@@ -1,0 +1,1 @@
+import '../../src/styles/tokens.css'; import '../../src/styles/foundations.css'; import '../../src/empty-state.js'; import './empty-state.css'; document.querySelector('#create')?.addEventListener('click', () => { const result = document.querySelector('#result'); if (result) result.textContent = 'create'; });

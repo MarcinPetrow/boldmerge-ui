@@ -1,0 +1,18 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "semantic",
+  "tokens": {
+    "typography.family.ui": { "type": "fontFamily", "value": "{font.family.ui}", "description": "Semantic UI font family.", "status": "approved" },
+    "typography.family.data": { "type": "fontFamily", "value": "{font.family.data}", "description": "Semantic data and aligned-number font family.", "status": "approved" },
+    "typography.weight.regular": { "type": "fontWeight", "value": "{font.weight.regular}", "description": "Default text weight.", "status": "proposal" },
+    "typography.weight.emphasis": { "type": "fontWeight", "value": "{font.weight.medium}", "description": "Default emphasis weight.", "status": "proposal" },
+    "geometry.radius.default": { "type": "dimension", "value": "{radius.8}", "description": "Default precision radius.", "status": "approved" },
+    "geometry.border.thin": { "type": "dimension", "value": "{size.1}", "description": "Default thin border.", "status": "approved" },
+    "interaction.target.minimum": { "type": "dimension", "value": "{size.44}", "description": "Minimum target size in touch-oriented contexts.", "status": "approved" },
+    "motion.duration.press": { "type": "duration", "value": "{duration.press}", "description": "Semantic press duration.", "status": "approved" },
+    "motion.duration.interaction": { "type": "duration", "value": "{duration.fast}", "description": "Semantic hover and focus duration.", "status": "approved" },
+    "motion.duration.overlay": { "type": "duration", "value": "{duration.overlay}", "description": "Semantic dialog and drawer duration.", "status": "approved" },
+    "motion.easing.standard": { "type": "cubicBezier", "value": "{easing.standard}", "description": "Semantic standard easing.", "status": "approved" },
+    "content.opacity.disabled": { "type": "number", "value": "{opacity.disabled}", "description": "Disabled content opacity.", "status": "proposal" }
+  }
+}

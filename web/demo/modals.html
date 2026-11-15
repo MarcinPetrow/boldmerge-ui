@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldMerge Dialog and Drawer demo</title>
+    <script type="module" src="./modals.ts"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Dialog and Drawer</h1>
+      <div class="controls"><bm-button id="dialog-trigger">Edit project</bm-button><bm-button id="drawer-trigger" variant="outline">Open activity</bm-button></div>
+      <bm-dialog id="dialog" label="Edit project">
+        <h2 slot="header">Edit project</h2>
+        <bm-input id="name" label="Project name" value="Northstar"></bm-input>
+        <p>Changes apply to the current workspace.</p>
+        <span slot="footer">Last updated today</span>
+        <bm-button slot="actions" variant="ghost" data-bm-dialog-close="cancel">Cancel</bm-button>
+        <bm-button slot="actions" data-bm-dialog-close="saved">Save changes</bm-button>
+      </bm-dialog>
+      <bm-drawer id="drawer" label="Recent activity">
+        <h2 slot="header">Recent activity</h2><bm-input id="filter" label="Filter activity"></bm-input><ul><li>Deployment completed</li><li>Member invited</li></ul><span slot="footer">Showing two events</span><bm-button slot="actions" data-bm-drawer-close="done">Done</bm-button>
+      </bm-drawer>
+      <h2>Push composition</h2>
+      <bm-drawer id="push" mode="push" open label="Inspector"><article slot="content"><h3>Workspace</h3><p>Desktop content remains operable. Resize below 768px to see modal Overlay behavior.</p></article><h3 slot="header">Inspector</h3><p>Owner: Platform team</p><bm-button variant="outline">Inspect deployment</bm-button></bm-drawer>
+      <p id="result" aria-live="polite">No modal action.</p>
+    </main>
+  </body>
+</html>

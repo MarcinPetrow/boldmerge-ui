@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldMerge Tooltip and Dropdown demo</title>
+    <script type="module" src="./overlays.ts"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Tooltip and Dropdown</h1>
+      <p>Use mouse hover, keyboard focus, arrow keys, typeahead, Escape, and outside click.</p>
+      <div class="row">
+        <bm-tooltip content="Create a new project"><button type="button">Create project</button></bm-tooltip>
+        <bm-dropdown id="actions" label="Project actions">
+          <span slot="trigger">Project actions</span>
+          <bm-dropdown-group label="Edit actions">
+            <bm-dropdown-item value="rename"><span slot="prefix" aria-hidden="true">✎</span>Rename</bm-dropdown-item>
+            <bm-dropdown-item value="duplicate">Duplicate</bm-dropdown-item>
+            <bm-dropdown-item value="archive" disabled>Archive unavailable</bm-dropdown-item>
+          </bm-dropdown-group>
+          <bm-dropdown-group label="Destructive actions" destructive>
+            <bm-dropdown-item value="delete">Delete project</bm-dropdown-item>
+          </bm-dropdown-group>
+        </bm-dropdown>
+      </div>
+      <p id="result" aria-live="polite">No action selected.</p>
+      <section data-bm-theme="dark" data-bm-density="compact" data-bm-accent="violet">
+        <h2>Nested Dark / Compact</h2>
+        <bm-tooltip content="Locally themed tooltip"><button type="button">Local tooltip</button></bm-tooltip>
+        <bm-dropdown label="Local actions"><span slot="trigger">Local actions</span><bm-dropdown-item value="inspect">Inspect</bm-dropdown-item><bm-dropdown-item value="export">Export</bm-dropdown-item></bm-dropdown>
+      </section>
+    </main>
+  </body>
+</html>

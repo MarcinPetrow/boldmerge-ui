@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldMerge Application Shell demo</title>
+    <script type="module" src="./shell.ts"></script>
+  </head>
+  <body>
+    <bm-app-shell id="shell">
+      <bm-sidebar id="sidebar" slot="sidebar" label="Main navigation">
+        <strong slot="header" class="brand">BM</strong>
+        <bm-sidebar-item href="#overview" active><span slot="icon" aria-hidden="true">⌂</span>Overview</bm-sidebar-item>
+        <bm-sidebar-item href="#projects"><span slot="icon" aria-hidden="true">◇</span>Projects</bm-sidebar-item>
+        <bm-sidebar-item href="#settings"><span slot="icon" aria-hidden="true">⚙</span>Settings</bm-sidebar-item>
+        <small slot="footer">BoldMerge Adaptive</small>
+      </bm-sidebar>
+      <bm-topbar slot="topbar">
+        <bm-icon-button id="menu" slot="start" label="Open navigation" variant="ghost"><span aria-hidden="true">☰</span></bm-icon-button>
+        <strong slot="start">Workspace</strong>
+        <bm-icon-button slot="notifications" label="Notifications" variant="ghost"><span aria-hidden="true">●</span></bm-icon-button>
+        <bm-button id="collapse" slot="account" variant="ghost">Toggle sidebar</bm-button>
+      </bm-topbar>
+      <main>
+        <bm-page-layout layout="contained">
+          <bm-section label="Workspace overview">
+            <h1 slot="header">Overview</h1>
+            <bm-button slot="actions">Create project</bm-button>
+            <div class="cards">
+              <bm-card label="Deployment status"><h2 slot="header">Production</h2><bm-status tone="success">Operational</bm-status></bm-card>
+              <bm-card label="Local theme example"><h2 slot="header">Scoped theme</h2><bm-theme theme="dark" density="compact" accent="violet"><div class="scope">Dark / Compact / Violet</div></bm-theme></bm-card>
+            </div>
+          </bm-section>
+        </bm-page-layout>
+      </main>
+    </bm-app-shell>
+  </body>
+</html>

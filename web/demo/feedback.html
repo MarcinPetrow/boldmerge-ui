@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>BoldMerge feedback demo</title><script type="module" src="./feedback.ts"></script></head>
+  <body>
+    <main>
+      <h1>Toast and integrated validation</h1>
+      <div class="actions"><bm-button id="success">Show success</bm-button><bm-button id="error" treatment="destructive">Show error</bm-button></div>
+      <form id="demo-form" novalidate>
+        <bm-validation-summary id="summary" for="demo-form"></bm-validation-summary>
+        <bm-input label="Email address" name="email" type="email" required></bm-input>
+        <bm-select label="Region" name="region" placeholder="Choose region" required><bm-option value="eu">Europe</bm-option><bm-option value="us">United States</bm-option></bm-select>
+        <bm-button type="submit">Save profile</bm-button>
+      </form>
+      <bm-theme class="nested" theme="dark" density="compact" accent="violet"><h2>Nested Dark / Compact</h2><bm-toast title="Local scope" message="Theme and density cascade through the open shadow root." tone="success" duration="0"></bm-toast></bm-theme>
+      <bm-toast-region id="notifications"></bm-toast-region>
+    </main>
+  </body>
+</html>

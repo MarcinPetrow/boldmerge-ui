@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema/token-file.schema.json",
+  "layer": "semantic",
+  "context": { "theme": "dark" },
+  "tokens": {
+    "color.canvas": { "type": "color", "value": "{color.neutral.950}", "description": "Application canvas.", "status": "proposal" },
+    "color.surface": { "type": "color", "value": "{color.neutral.900}", "description": "Primary flat surface.", "status": "proposal" },
+    "color.surface.subtle": { "type": "color", "value": "{color.neutral.850}", "description": "Hybrid input and subdued surface.", "status": "proposal" },
+    "color.text.primary": { "type": "color", "value": "{color.neutral.25}", "description": "Primary text.", "status": "proposal" },
+    "color.text.secondary": { "type": "color", "value": "{color.neutral.300}", "description": "Secondary text.", "status": "proposal" },
+    "color.text.muted": { "type": "color", "value": "#929baa", "description": "Subdued text; validate by actual usage and size.", "status": "proposal" },
+    "color.border": { "type": "color", "value": "#343a45", "description": "Subtle border and divider.", "status": "proposal" },
+    "color.border.strong": { "type": "color", "value": "#4a5260", "description": "Strong control border.", "status": "proposal" },
+    "color.accent.text": { "type": "color", "value": "{accent.tone.300}", "description": "Accent text on dark neutral surfaces.", "status": "proposal" },
+    "color.accent.solid": { "type": "color", "value": "{accent.tone.300}", "description": "Solid accent control surface.", "status": "proposal" },
+    "color.accent.on-solid": { "type": "color", "value": "{color.neutral.950}", "description": "Content on a solid accent surface.", "status": "proposal" },
+    "color.accent.subtle": { "type": "color", "value": "{accent.tone.900}", "description": "Subtle accent surface.", "status": "proposal" },
+    "color.accent.on-subtle": { "type": "color", "value": "{accent.tone.200}", "description": "Accent content on a subtle accent surface.", "status": "proposal" },
+    "color.focus": { "type": "color", "value": "{accent.tone.400}", "description": "Focus indicator color; non-text contrast is validated.", "status": "proposal" },
+    "color.success": { "type": "color", "value": "{color.success.dark}", "description": "Success foreground, distinct from accent.", "status": "proposal" },
+    "color.warning": { "type": "color", "value": "{color.warning.dark}", "description": "Warning foreground, distinct from accent.", "status": "proposal" },
+    "color.error": { "type": "color", "value": "{color.error.dark}", "description": "Error foreground, distinct from accent.", "status": "proposal" },
+    "color.error.on-solid": { "type": "color", "value": "{color.neutral.950}", "description": "Content on a solid error surface.", "status": "proposal" },
+    "color.overlay": { "type": "color", "value": "#000000b3", "description": "Dialog and drawer overlay.", "status": "proposal" }
+  }
+}

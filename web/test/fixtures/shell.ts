@@ -1,0 +1,21 @@
+import '../../src/styles/tokens.css';
+import '../../src/styles/foundations.css';
+import '../../src/app-shell.js';
+import '../../src/sidebar.js';
+import '../../src/topbar.js';
+import '../../src/icon-button.js';
+import '../../src/button.js';
+import '../../src/page-layout.js';
+import '../../src/section.js';
+import '../../src/breadcrumbs.js';
+import '../../src/card.js';
+import '../../src/status.js';
+import './shell.css';
+import type { BoldMergeAppShell } from '../../src/components/app-shell.js';
+
+const shell = document.querySelector<BoldMergeAppShell>('#app-shell');
+const menu = document.querySelector<HTMLElement>('#menu');
+menu?.addEventListener('bm-activate', () => shell?.toggleSidebar(menu));
+document.querySelector('#collapse')?.addEventListener('bm-activate', () => { if (shell) shell.sidebarCollapsed = !shell.sidebarCollapsed; });
+await Promise.all(['bm-app-shell', 'bm-sidebar', 'bm-topbar', 'bm-sidebar-item'].map((name) => customElements.whenDefined(name)));
+(window as Window & { shellReady?: boolean }).shellReady = true;

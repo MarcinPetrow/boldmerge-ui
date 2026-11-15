@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldMerge overlay fixtures</title>
+    <script type="module" src="./overlays.ts"></script>
+  </head>
+  <body>
+    <main>
+      <section id="light-overlays" class="fixture">
+        <h1>Light / Balanced</h1>
+        <div class="row top-row">
+          <bm-tooltip id="create-tooltip" content="Create a new project" placement="auto">
+            <button type="button">Create project</button>
+          </bm-tooltip>
+          <bm-tooltip content="Open project settings" placement="right">
+            <button type="button">Settings</button>
+          </bm-tooltip>
+        </div>
+        <div class="row menu-row">
+          <bm-dropdown id="project-actions" label="Project actions">
+            <span slot="trigger">Project actions</span>
+            <bm-dropdown-group label="Edit actions">
+              <bm-dropdown-item value="rename"><span slot="prefix" aria-hidden="true">✎</span>Rename</bm-dropdown-item>
+              <bm-dropdown-item value="duplicate"><span slot="prefix" aria-hidden="true">◇</span>Duplicate</bm-dropdown-item>
+              <bm-dropdown-item value="archive" disabled>Archive unavailable</bm-dropdown-item>
+            </bm-dropdown-group>
+            <bm-dropdown-group label="Destructive actions" destructive>
+              <bm-dropdown-item value="delete">Delete project</bm-dropdown-item>
+            </bm-dropdown-group>
+          </bm-dropdown>
+          <button id="outside" type="button">Outside control</button>
+        </div>
+        <p id="selection" aria-live="polite">No action selected.</p>
+      </section>
+
+      <section id="dark-overlays" class="fixture" data-bm-theme="dark" data-bm-density="compact" data-bm-accent="violet">
+        <h2>Dark / Compact</h2>
+        <div class="row">
+          <bm-tooltip id="compact-tooltip" content="Compact tooltip" open placement="bottom"><button type="button">Compact trigger</button></bm-tooltip>
+          <bm-dropdown id="compact-actions" label="Compact actions" open>
+            <span slot="trigger">Compact actions</span>
+            <bm-dropdown-item value="inspect">Inspect</bm-dropdown-item>
+            <bm-dropdown-item value="export">Export</bm-dropdown-item>
+          </bm-dropdown>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

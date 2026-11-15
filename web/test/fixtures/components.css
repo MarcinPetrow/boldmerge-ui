@@ -1,0 +1,90 @@
+body {
+  inline-size: 1100px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-block-size: 100vh;
+}
+
+.snapshot {
+  display: grid;
+  align-content: start;
+  gap: var(--bm-section-gap);
+  padding: var(--bm-section-gap);
+  color: var(--bm-color-text-primary);
+  background: var(--bm-color-canvas);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--bm-size-24);
+}
+
+h2 {
+  font-size: var(--bm-size-20);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bm-size-8);
+}
+
+.form-grid {
+  display: grid;
+  gap: var(--bm-size-12);
+}
+
+.checkbox-grid,
+.choice-grid {
+  display: grid;
+  gap: var(--bm-size-8);
+}
+
+.select-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--bm-size-8);
+}
+
+.display-grid {
+  display: grid;
+  gap: var(--bm-size-12);
+}
+
+#layout-states,
+#contained-layout {
+  padding: var(--bm-size-12);
+  border: var(--bm-size-1) solid var(--bm-color-border);
+  border-radius: var(--bm-card-radius);
+}
+
+#layout-states h2,
+#contained-layout h2 {
+  margin-block: var(--bm-size-8);
+}
+
+#selection-states,
+.selection-compact {
+  display: grid;
+  gap: var(--bm-size-16);
+  padding: var(--bm-size-12);
+  border: var(--bm-size-1) solid var(--bm-color-border);
+  border-radius: var(--bm-card-radius);
+}
+
+.muted {
+  color: var(--bm-color-text-secondary);
+  font-size: var(--bm-font-size-12);
+}
+
+.data {
+  font-family: var(--bm-typography-family-data);
+}

@@ -1,0 +1,9 @@
+:root { color: var(--bm-color-text-primary); background: var(--bm-color-canvas); font-family: var(--bm-typography-family-ui); }
+body { margin: 0; }
+main { inline-size: min(760px, calc(100% - var(--bm-size-32))); margin-inline: auto; padding-block: var(--bm-section-gap); }
+h1, h2, p { margin-block: 0; }
+main > p { margin-block-start: var(--bm-size-12); color: var(--bm-color-text-secondary); }
+.row { display: flex; flex-wrap: wrap; gap: var(--bm-size-16); margin-block: var(--bm-size-48); }
+button { min-block-size: var(--bm-button-height); padding-inline: var(--bm-button-padding-inline); color: var(--bm-color-text-primary); background: var(--bm-color-surface); border: var(--bm-size-1) solid var(--bm-color-border-strong); border-radius: var(--bm-button-radius); font: inherit; }
+section { display: flex; flex-wrap: wrap; align-items: center; gap: var(--bm-size-16); margin-block-start: var(--bm-size-48); padding: var(--bm-layout-gap); color: var(--bm-color-text-primary); background: var(--bm-color-canvas); border: var(--bm-size-1) solid var(--bm-color-border); border-radius: var(--bm-card-radius); }
+section h2 { flex-basis: 100%; }

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./components.ts"></script>
+  </head>
+  <body>
+    <main>
+      <section id="light-states" class="snapshot" aria-label="Light balanced component states">
+        <h1>Light · Balanced</h1>
+        <div class="row" id="button-states">
+          <bm-button id="primary">Primary</bm-button>
+          <bm-button variant="secondary">Secondary</bm-button>
+          <bm-button variant="outline">Outline</bm-button>
+          <bm-button variant="ghost">Ghost</bm-button>
+          <bm-button treatment="destructive">Delete</bm-button>
+          <bm-button disabled>Disabled</bm-button>
+          <bm-button loading>Loading</bm-button>
+        </div>
+        <div class="display-grid" id="display-states">
+          <div class="row" id="icon-button-states">
+            <bm-icon-button id="add-icon" label="Add workspace"><span aria-hidden="true">+</span></bm-icon-button>
+            <bm-icon-button label="Edit workspace" variant="secondary"><span aria-hidden="true">✎</span></bm-icon-button>
+            <bm-icon-button label="Open settings" variant="outline"><span aria-hidden="true">⚙</span></bm-icon-button>
+            <bm-icon-button label="More actions" variant="ghost"><span aria-hidden="true">⋯</span></bm-icon-button>
+            <bm-icon-button label="Delete workspace" variant="outline" treatment="destructive"><span aria-hidden="true">×</span></bm-icon-button>
+            <bm-icon-button label="Loading action" loading><span aria-hidden="true">↻</span></bm-icon-button>
+            <bm-icon-button label="Disabled action" disabled><span aria-hidden="true">−</span></bm-icon-button>
+          </div>
+          <div class="row"><bm-tag>Enterprise</bm-tag><bm-tag><span slot="prefix" aria-hidden="true">◆</span>Featured</bm-tag></div>
+          <div class="row"><bm-status>Draft</bm-status><bm-status tone="accent">In review</bm-status><bm-status tone="success">Operational</bm-status><bm-status tone="warning">Degraded</bm-status><bm-status tone="error">Failed</bm-status></div>
+        </div>
+        <div id="layout-states">
+          <bm-page-layout id="split-layout" layout="split">
+            <div slot="header"><bm-breadcrumbs label="Project breadcrumbs"><bm-breadcrumb-item href="/projects">Projects</bm-breadcrumb-item><bm-breadcrumb-item href="/projects/northstar">Northstar</bm-breadcrumb-item><bm-breadcrumb-item current>Overview</bm-breadcrumb-item></bm-breadcrumbs><h2>Northstar overview</h2></div>
+            <bm-section label="Deployment overview" separator><h2 slot="header">Deployment</h2><bm-button slot="actions" variant="outline">Configure</bm-button><p>Production is healthy and synchronized.</p><span slot="footer" class="muted">Updated now</span></bm-section>
+            <bm-card slot="aside" label="Project details"><h2 slot="header">Details</h2><p>Owner: Platform team</p></bm-card>
+          </bm-page-layout>
+        </div>
+        <form id="selection-form"><div id="selection-states">
+          <bm-tabs id="project-tabs" label="Project views" value="overview">
+            <bm-tab slot="tab" value="overview">Overview</bm-tab><bm-tab slot="tab" value="activity">Activity</bm-tab><bm-tab slot="tab" value="audit" disabled>Audit log</bm-tab>
+            <bm-tab-panel value="overview">Overview panel content</bm-tab-panel><bm-tab-panel value="activity">Activity panel content</bm-tab-panel><bm-tab-panel value="audit">Audit panel content</bm-tab-panel>
+          </bm-tabs>
+          <bm-segmented-control id="view-mode" name="view" label="View mode" value="list"><bm-segment value="list">List</bm-segment><bm-segment value="board">Board</bm-segment><bm-segment value="timeline" disabled>Timeline</bm-segment></bm-segmented-control>
+        </div></form>
+        <form id="test-form" class="form-grid">
+          <bm-input id="email" name="email" label="Email address" type="email" required></bm-input>
+          <bm-input label="Project" value="BoldMerge"></bm-input>
+          <bm-input label="Workspace" error="Workspace is required."></bm-input>
+          <bm-input label="Disabled" value="Unavailable" disabled></bm-input>
+          <div class="select-grid" id="select-states">
+            <bm-select id="region" name="region" label="Region" value="eu" required><bm-option value="us">United States</bm-option><bm-option value="eu">Europe</bm-option><bm-option value="apac" disabled>Asia Pacific</bm-option></bm-select>
+            <bm-select id="empty-select" name="empty" label="Environment" placeholder="Choose environment" required><bm-option value="dev">Development</bm-option><bm-option value="prod">Production</bm-option></bm-select>
+            <bm-select label="Invalid selection" error="This selection is unavailable."><bm-option value="legacy" selected>Legacy</bm-option></bm-select>
+            <bm-select label="Disabled select" value="locked" disabled><bm-option value="locked">Locked</bm-option></bm-select>
+          </div>
+          <div class="checkbox-grid" id="checkbox-states">
+            <bm-checkbox id="updates" name="updates" value="enabled">Enable updates</bm-checkbox>
+            <bm-checkbox checked>Checked</bm-checkbox>
+            <bm-checkbox id="mixed" indeterminate>Mixed selection</bm-checkbox>
+            <bm-checkbox id="terms" required data-invalid>Accept terms</bm-checkbox>
+            <bm-checkbox disabled>Disabled choice</bm-checkbox>
+          </div>
+          <div class="choice-grid" id="radio-switch-states">
+            <bm-radio-group id="plan" name="plan" label="Deployment plan" value="team" required>
+              <bm-radio value="starter">Starter</bm-radio>
+              <bm-radio value="team">Team</bm-radio>
+              <bm-radio value="enterprise" disabled>Enterprise</bm-radio>
+            </bm-radio-group>
+            <bm-switch id="alerts" name="alerts" value="enabled" checked>Deployment alerts</bm-switch>
+            <bm-switch disabled>Disabled switch</bm-switch>
+          </div>
+        </form>
+        <bm-card label="Deployment summary">
+          <h2 slot="header">Deployment</h2>
+          <bm-button slot="actions" variant="ghost">Details</bm-button>
+          <p>Production is healthy. All checks completed.</p>
+          <span slot="footer" class="muted">Updated 2 minutes ago</span>
+        </bm-card>
+      </section>
+
+      <section id="dark-states" class="snapshot" data-bm-theme="dark" data-bm-density="compact" data-bm-accent="violet" aria-label="Dark compact component states">
+        <h1>Dark · Compact</h1>
+        <div class="row">
+          <bm-button>Primary</bm-button>
+          <bm-button variant="secondary">Secondary</bm-button>
+          <bm-button variant="outline">Outline</bm-button>
+          <bm-button variant="ghost" treatment="destructive">Remove</bm-button>
+          <bm-button loading>Loading</bm-button>
+        </div>
+        <div class="display-grid"><div class="row"><bm-icon-button label="Compact add"><span aria-hidden="true">+</span></bm-icon-button><bm-icon-button label="Compact edit" variant="ghost"><span aria-hidden="true">✎</span></bm-icon-button><bm-tag>Compact tag</bm-tag></div><div class="row"><bm-status tone="success">Healthy</bm-status><bm-status tone="warning">Delayed</bm-status></div></div>
+        <bm-page-layout id="contained-layout" layout="contained"><div slot="header"><bm-breadcrumbs label="Settings breadcrumbs"><bm-breadcrumb-item href="/settings">Settings</bm-breadcrumb-item><bm-breadcrumb-item current>Profile</bm-breadcrumb-item></bm-breadcrumbs></div><bm-section label="Profile settings"><h2 slot="header">Profile</h2><p>Compact contained layout.</p></bm-section></bm-page-layout>
+        <div class="selection-compact"><bm-tabs label="Compact views" value="details"><bm-tab slot="tab" value="details">Details</bm-tab><bm-tab slot="tab" value="history">History</bm-tab><bm-tab-panel value="details">Compact details</bm-tab-panel><bm-tab-panel value="history">Compact history</bm-tab-panel></bm-tabs><bm-segmented-control label="Compact mode" value="grid"><bm-segment value="list">List</bm-segment><bm-segment value="grid">Grid</bm-segment></bm-segmented-control></div>
+        <div class="form-grid">
+          <bm-input label="Search" type="search"></bm-input>
+          <bm-input label="Owner" value="Ada Lovelace"></bm-input>
+          <bm-input label="Repository" error="Repository was not found."></bm-input>
+          <bm-select label="Compact region" value="eu"><bm-option value="us">United States</bm-option><bm-option value="eu">Europe</bm-option></bm-select>
+          <div class="checkbox-grid">
+            <bm-checkbox checked>Compact checked</bm-checkbox>
+            <bm-checkbox indeterminate>Compact mixed</bm-checkbox>
+            <bm-checkbox>Compact unchecked</bm-checkbox>
+          </div>
+          <div class="choice-grid">
+            <bm-radio-group label="Compact region" value="eu">
+              <bm-radio value="us">United States</bm-radio>
+              <bm-radio value="eu">Europe</bm-radio>
+            </bm-radio-group>
+            <bm-switch checked>Compact switch</bm-switch>
+          </div>
+        </div>
+        <bm-card label="Build summary">
+          <h2 slot="header">Build 1842</h2>
+          <p>Completed in <span class="data">03:42</span>.</p>
+          <span slot="footer" class="muted">Compact density remains independent of viewport width.</span>
+        </bm-card>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+import '../../src/styles/tokens.css'; import '../../src/styles/foundations.css'; import '../../src/theme.js'; import '../../src/chart.js'; import './chart.css';
+type ChartElement = HTMLElement & { categories: string[]; series: Array<{ label: string; values: number[]; formattedValues?: string[] }> };
+const deployments = document.querySelector('#deployments') as ChartElement; deployments.categories = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']; deployments.series = [{ label: 'Successful', values: [18, 24, 22, 31, 36] }, { label: 'Failed', values: [4, 3, 5, 2, 1] }];
+const latency = document.querySelector('#latency') as ChartElement; latency.categories = ['09:00', '10:00', '11:00', '12:00', '13:00']; latency.series = [{ label: 'P50', values: [112, 108, 116, 110, 106], formattedValues: ['112 ms', '108 ms', '116 ms', '110 ms', '106 ms'] }, { label: 'P95', values: [240, 226, 251, 232, 219], formattedValues: ['240 ms', '226 ms', '251 ms', '232 ms', '219 ms'] }];

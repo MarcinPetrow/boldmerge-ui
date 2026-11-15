@@ -1,0 +1,244 @@
+{
+  "name": "@boldmerge/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "BoldMerge Adaptive Web foundation",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./dist/types/theme.d.ts",
+      "import": "./dist/theme.js"
+    },
+    "./foundation": {
+      "types": "./dist/types/foundation.d.ts",
+      "import": "./dist/foundation.js"
+    },
+    "./icon": {
+      "types": "./dist/types/icon.d.ts",
+      "import": "./dist/icon.js"
+    },
+    "./button": {
+      "types": "./dist/types/button.d.ts",
+      "import": "./dist/button.js"
+    },
+    "./input": {
+      "types": "./dist/types/input.d.ts",
+      "import": "./dist/input.js"
+    },
+    "./card": {
+      "types": "./dist/types/card.d.ts",
+      "import": "./dist/card.js"
+    },
+    "./checkbox": {
+      "types": "./dist/types/checkbox.d.ts",
+      "import": "./dist/checkbox.js"
+    },
+    "./radio": {
+      "types": "./dist/types/radio.d.ts",
+      "import": "./dist/radio.js"
+    },
+    "./switch": {
+      "types": "./dist/types/switch.d.ts",
+      "import": "./dist/switch.js"
+    },
+    "./select": {
+      "types": "./dist/types/select.d.ts",
+      "import": "./dist/select.js"
+    },
+    "./icon-button": {
+      "types": "./dist/types/icon-button.d.ts",
+      "import": "./dist/icon-button.js"
+    },
+    "./tag": {
+      "types": "./dist/types/tag.d.ts",
+      "import": "./dist/tag.js"
+    },
+    "./status": {
+      "types": "./dist/types/status.d.ts",
+      "import": "./dist/status.js"
+    },
+    "./page-layout": {
+      "types": "./dist/types/page-layout.d.ts",
+      "import": "./dist/page-layout.js"
+    },
+    "./section": {
+      "types": "./dist/types/section.d.ts",
+      "import": "./dist/section.js"
+    },
+    "./breadcrumbs": {
+      "types": "./dist/types/breadcrumbs.d.ts",
+      "import": "./dist/breadcrumbs.js"
+    },
+    "./tabs": {
+      "types": "./dist/types/tabs.d.ts",
+      "import": "./dist/tabs.js"
+    },
+    "./segmented-control": {
+      "types": "./dist/types/segmented-control.d.ts",
+      "import": "./dist/segmented-control.js"
+    },
+    "./sidebar": {
+      "types": "./dist/types/sidebar.d.ts",
+      "import": "./dist/sidebar.js"
+    },
+    "./topbar": {
+      "types": "./dist/types/topbar.d.ts",
+      "import": "./dist/topbar.js"
+    },
+    "./app-shell": {
+      "types": "./dist/types/app-shell.d.ts",
+      "import": "./dist/app-shell.js"
+    },
+    "./tooltip": {
+      "types": "./dist/types/tooltip.d.ts",
+      "import": "./dist/tooltip.js"
+    },
+    "./dropdown": {
+      "types": "./dist/types/dropdown.d.ts",
+      "import": "./dist/dropdown.js"
+    },
+    "./dialog": {
+      "types": "./dist/types/dialog.d.ts",
+      "import": "./dist/dialog.js"
+    },
+    "./drawer": {
+      "types": "./dist/types/drawer.d.ts",
+      "import": "./dist/drawer.js"
+    },
+    "./toast": {
+      "types": "./dist/types/toast.d.ts",
+      "import": "./dist/toast.js"
+    },
+    "./validation-summary": {
+      "types": "./dist/types/validation-summary.d.ts",
+      "import": "./dist/validation-summary.js"
+    },
+    "./combobox": {
+      "types": "./dist/types/combobox.d.ts",
+      "import": "./dist/combobox.js"
+    },
+    "./command-palette": {
+      "types": "./dist/types/command-palette.d.ts",
+      "import": "./dist/command-palette.js"
+    },
+    "./pagination": {
+      "types": "./dist/types/pagination.d.ts",
+      "import": "./dist/pagination.js"
+    },
+    "./table": {
+      "types": "./dist/types/table.d.ts",
+      "import": "./dist/table.js"
+    },
+    "./avatar": {
+      "types": "./dist/types/avatar.d.ts",
+      "import": "./dist/avatar.js"
+    },
+    "./empty-state": {
+      "types": "./dist/types/empty-state.d.ts",
+      "import": "./dist/empty-state.js"
+    },
+    "./skeleton": {
+      "types": "./dist/types/skeleton.d.ts",
+      "import": "./dist/skeleton.js"
+    },
+    "./progress": {
+      "types": "./dist/types/progress.d.ts",
+      "import": "./dist/progress.js"
+    },
+    "./kpi": {
+      "types": "./dist/types/kpi.d.ts",
+      "import": "./dist/kpi.js"
+    },
+    "./chart": {
+      "types": "./dist/types/chart.d.ts",
+      "import": "./dist/chart.js"
+    },
+    "./fonts.css": "./dist/fonts.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "./dist/index.js",
+    "./dist/theme.js",
+    "./dist/icon.js",
+    "./dist/button.js",
+    "./dist/input.js",
+    "./dist/card.js",
+    "./dist/checkbox.js",
+    "./dist/radio.js",
+    "./dist/switch.js",
+    "./dist/select.js",
+    "./dist/icon-button.js",
+    "./dist/tag.js",
+    "./dist/status.js",
+    "./dist/page-layout.js",
+    "./dist/section.js",
+    "./dist/breadcrumbs.js",
+    "./dist/tabs.js",
+    "./dist/segmented-control.js",
+    "./dist/sidebar.js",
+    "./dist/topbar.js",
+    "./dist/app-shell.js",
+    "./dist/tooltip.js",
+    "./dist/dropdown.js",
+    "./dist/dialog.js",
+    "./dist/drawer.js",
+    "./dist/toast.js",
+    "./dist/validation-summary.js",
+    "./dist/combobox.js",
+    "./dist/command-palette.js",
+    "./dist/pagination.js",
+    "./dist/table.js",
+    "./dist/avatar.js",
+    "./dist/empty-state.js",
+    "./dist/skeleton.js",
+    "./dist/progress.js",
+    "./dist/kpi.js",
+    "./dist/chart.js",
+    "./dist/*.css"
+  ],
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "tokens:sync": "node scripts/sync-tokens.mjs",
+    "tokens:check": "node scripts/sync-tokens.mjs --check",
+    "dev": "vite",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "npm run clean && npm run tokens:sync && tsc -p tsconfig.build.json && rollup -c && node scripts/copy-assets.mjs",
+    "api:check": "node scripts/check-public-api.mjs",
+    "api:update": "node scripts/check-public-api.mjs --update",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:firefox": "playwright test --config=playwright.cross-browser.config.ts --project=firefox",
+    "test:webkit": "playwright test --config=playwright.cross-browser.config.ts --project=webkit",
+    "test:browser-matrix": "playwright test --config=playwright.cross-browser.config.ts",
+    "test": "npm run test:unit && npm run test:e2e",
+    "check": "npm run tokens:check && npm run typecheck && npm run build && npm run api:check && npm test"
+  },
+  "dependencies": {
+    "lit": "3.3.3",
+    "lucide": "1.73.0"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "happy-dom": "21.0.4",
+    "rollup": "4.68.2",
+    "typescript": "7.0.2",
+    "vite": "8.3.7",
+    "vitest": "5.1.0"
+  }
+}

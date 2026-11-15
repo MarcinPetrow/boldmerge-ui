@@ -1,0 +1,4 @@
+.skeleton-card { display: grid; grid-template-columns: auto 1fr; gap: var(--bm-size-16); margin-block-end: var(--bm-size-24); padding: var(--bm-card-padding); color: var(--bm-color-text-primary); background: var(--bm-color-surface); border: 1px solid var(--bm-color-border); border-radius: var(--bm-card-radius); }
+.skeleton-card .stack { align-self: center; }
+.skeleton-card .short { --bm-skeleton-width: 62%; }
+.skeleton-card .preview { grid-column: 1 / -1; --bm-skeleton-height: 180px; }

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://boldmerge.dev/schemas/token-file.schema.json",
+  "title": "BoldMerge Adaptive token file",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["layer", "tokens"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "layer": { "enum": ["primitive", "semantic", "component"] },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "theme": { "enum": ["light", "dark"] },
+        "density": { "enum": ["balanced", "compact"] },
+        "accent": { "enum": ["cyan", "blue", "violet", "orange", "green"] }
+      }
+    },
+    "tokens": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "value", "description", "status"],
+        "properties": {
+          "type": {
+            "enum": ["color", "dimension", "duration", "fontFamily", "fontWeight", "number", "cubicBezier", "shadow", "string"]
+          },
+          "value": { "type": ["string", "number"] },
+          "description": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["approved", "proposal"] }
+        }
+      }
+    }
+  }
+}

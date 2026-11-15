@@ -1,0 +1,1 @@
+* { box-sizing: border-box; } body { margin: 0; padding: 32px; color: var(--bm-color-text-primary); background: var(--bm-color-background); font-family: var(--bm-typography-family-ui); } main { display: grid; gap: 16px; max-inline-size: 720px; margin: auto; } h1, p { margin: 0; } button { justify-self: start; }

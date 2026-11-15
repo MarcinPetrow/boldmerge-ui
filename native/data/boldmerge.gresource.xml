@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/boldmerge/native">
+    <file>boldmerge-tokens.css</file>
+    <file>foundation.css</file>
+    <file>components.css</file>
+    <file>component-metrics.css</file>
+    <file>icons/bell.svg</file>
+    <file>icons/check.svg</file>
+    <file>icons/circle-alert.svg</file>
+    <file>icons/circle-check.svg</file>
+    <file>icons/circle-x.svg</file>
+    <file>icons/diamond.svg</file>
+    <file>icons/ellipsis.svg</file>
+    <file>icons/folder.svg</file>
+    <file>icons/folder-plus.svg</file>
+    <file>icons/grid-2x2.svg</file>
+    <file>icons/history.svg</file>
+    <file>icons/house.svg</file>
+    <file>icons/minus.svg</file>
+    <file>icons/pencil.svg</file>
+    <file>icons/plus.svg</file>
+    <file>icons/rotate-cw.svg</file>
+    <file>icons/save.svg</file>
+    <file>icons/search.svg</file>
+    <file>icons/settings.svg</file>
+    <file>icons/star.svg</file>
+    <file>icons/trash-2.svg</file>
+    <file>icons/triangle-alert.svg</file>
+    <file>icons/x.svg</file>
+  </gresource>
+</gresources>

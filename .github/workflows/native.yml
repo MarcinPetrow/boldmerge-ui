@@ -1,0 +1,37 @@
+name: Native
+
+on:
+  pull_request:
+    paths:
+      - 'native/**'
+      - 'examples/native/**'
+      - 'tokens/**'
+      - 'dist/**'
+      - 'THIRD_PARTY_NOTICES.md'
+      - '.github/workflows/native.yml'
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GTK toolchain
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          meson ninja-build libgtk-4-dev libadwaita-1-dev
+          gobject-introspection libgirepository1.0-dev
+          xvfb dbus-x11 at-spi2-core
+      - run: meson setup native/build native --prefix="$PWD/_install"
+      - run: meson compile -C native/build
+      - run: dbus-run-session -- xvfb-run -a meson test -C native/build --print-errorlogs
+      - run: meson install -C native/build
+      - run: >-
+          PKG_CONFIG_PATH="$PWD/_install/lib/pkgconfig:$PWD/_install/lib/x86_64-linux-gnu/pkgconfig"
+          meson setup examples/native/build examples/native
+      - run: meson compile -C examples/native/build
+

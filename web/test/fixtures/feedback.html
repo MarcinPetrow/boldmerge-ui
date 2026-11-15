@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-bm-theme="light" data-bm-density="balanced" data-bm-accent="cyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./feedback.ts"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Feedback</h1>
+      <form id="profile-form" novalidate>
+        <bm-validation-summary id="summary" for="profile-form"></bm-validation-summary>
+        <bm-input id="email" name="email" label="Email address" type="email" required></bm-input>
+        <bm-select id="region" name="region" label="Region" placeholder="Choose region" required>
+          <bm-option value="eu">Europe</bm-option><bm-option value="us">United States</bm-option>
+        </bm-select>
+        <bm-button type="submit">Save</bm-button>
+      </form>
+      <section id="static-toasts" aria-label="Toast variants">
+        <bm-toast title="Saved" message="Workspace settings updated." tone="success" duration="0"></bm-toast>
+        <bm-toast title="Connection interrupted" message="Retrying in the background." tone="error" duration="0"></bm-toast>
+      </section>
+      <bm-toast-region id="region-owner" max-visible="1"></bm-toast-region>
+    </main>
+  </body>
+</html>

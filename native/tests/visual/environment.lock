@@ -1,0 +1,9 @@
+# BoldMerge Native deterministic capture profile; not a support-policy claim.
+fontconfig=2.17.1-3ubuntu1
+fonts-noto-core=20201225-2build1
+libadwaita-1-0=1.9.1-0ubuntu0.2
+libcairo2=1.18.4-3
+libgtk-4-1=4.22.4+ds-0ubuntu0.1
+libharfbuzz0b=12.3.2-2
+libpango-1.0-0=1.57.0-1
+xvfb=2:21.1.22-1ubuntu1.3
