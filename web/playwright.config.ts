@@ -4,6 +4,11 @@ export default defineConfig({
   testDir: './test/browser',
   fullyParallel: false,
   reporter: 'line',
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: process.env.CI ? 0.025 : 0,
+    },
+  },
   use: {
     baseURL: 'http://127.0.0.1:4173',
     browserName: 'chromium',

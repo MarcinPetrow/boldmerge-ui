@@ -2,6 +2,7 @@ import path from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: process.env.BM_DEMO_BASE ?? '/',
   build: {
     rollupOptions: {
       input: {

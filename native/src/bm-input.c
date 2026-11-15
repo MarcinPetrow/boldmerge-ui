@@ -100,18 +100,23 @@ update_accessibility(BmInput *self)
                                 ? GTK_ACCESSIBLE_INVALID_TRUE
                                 : GTK_ACCESSIBLE_INVALID_FALSE,
                               -1);
-  gtk_accessible_update_relation(GTK_ACCESSIBLE(self->entry),
-                                 GTK_ACCESSIBLE_RELATION_LABELLED_BY,
-                                   GTK_ACCESSIBLE(self->floating_label), NULL,
-                                 -1);
-  if (self->error != NULL && self->error[0] != '\0') {
+  /* GTK 4.14 can crash while updating reference relations on an unrooted
+   * entry. The equivalent string properties above preserve the accessible
+   * name and error description on older supported runtimes. */
+  if (gtk_check_version(4, 16, 0) == NULL) {
     gtk_accessible_update_relation(GTK_ACCESSIBLE(self->entry),
-                                   GTK_ACCESSIBLE_RELATION_ERROR_MESSAGE,
-                                     GTK_ACCESSIBLE(self->error_label), NULL,
+                                   GTK_ACCESSIBLE_RELATION_LABELLED_BY,
+                                     GTK_ACCESSIBLE(self->floating_label), NULL,
                                    -1);
-  } else {
-    gtk_accessible_reset_relation(GTK_ACCESSIBLE(self->entry),
-                                  GTK_ACCESSIBLE_RELATION_ERROR_MESSAGE);
+    if (self->error != NULL && self->error[0] != '\0') {
+      gtk_accessible_update_relation(GTK_ACCESSIBLE(self->entry),
+                                     GTK_ACCESSIBLE_RELATION_ERROR_MESSAGE,
+                                       GTK_ACCESSIBLE(self->error_label), NULL,
+                                     -1);
+    } else {
+      gtk_accessible_reset_relation(GTK_ACCESSIBLE(self->entry),
+                                    GTK_ACCESSIBLE_RELATION_ERROR_MESSAGE);
+    }
   }
 }
 
