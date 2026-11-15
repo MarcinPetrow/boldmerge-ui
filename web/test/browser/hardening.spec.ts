@@ -35,4 +35,4 @@ test('keeps all motion-bearing hardening examples static under reduced motion', 
   await expect(page.locator('#forced-skeleton').locator('[part~="skeleton"]')).toHaveCSS('animation-name', 'none');
 });
 
-test('@visual RTL and pseudo-localized hardening baseline', async ({ page }) => { await expect(page.locator('#rtl-chart').locator('.line')).toHaveCount(2); await page.evaluate(() => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))); await expect(page).toHaveScreenshot('hardening-rtl-pseudo-light-balanced.png', { animations: 'disabled', fullPage: true }); });
+test('@visual RTL and pseudo-localized hardening baseline', async ({ page }) => { await page.setViewportSize({ width: 1280, height: 1329 }); await expect(page.locator('#rtl-chart').locator('.line')).toHaveCount(2); await page.evaluate(() => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))); await expect(page).toHaveScreenshot('hardening-rtl-pseudo-light-balanced.png', { animations: 'disabled', fullPage: true }); });
